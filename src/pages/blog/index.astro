@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .filter(p => !p.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+<BaseLayout
+  title="Blog"
+  description="Straight talk about print-on-demand. Legal foundations, tax setup, and real business operations that the other POD courses skip."
+>
+  <section class="blog-hero">
+    <div class="container">
+      <p class="eyebrow">From The Legit Launch</p>
+      <h1>The Blog</h1>
+      <p class="lead">Straight talk about print-on-demand. The legal foundation, tax setup, and real business operations that the other courses skip.</p>
+    </div>
+  </section>
+
+  <section class="blog-list">
+    <div class="container">
+      {posts.length === 0 ? (
+        <div class="blog-empty">
+          <p>Posts coming soon. <a href="https://thelegitlaunch.kit.com/42cf1d5c10">Join the waitlist</a> to get notified.</p>
+        </div>
+      ) : (
+        <div class="post-grid">
+          {posts.map(post => (
+            <article class="post-card">
+              <div class="post-card__meta">
+                <time datetime={post.data.pubDate.toISOString()}>
+                  {formatDate(post.data.pubDate)}
+                </time>
+                {post.data.tags && post.data.tags.length > 0 && (
+                  <span class="post-card__tag">{post.data.tags[0]}</span>
+                )}
+              </div>
+              <h2 class="post-card__title">
+                <a href={`/blog/${post.id}`}>{post.data.title}</a>
+              </h2>
+              <p class="post-card__desc">{post.data.description}</p>
+              <a href={`/blog/${post.id}`} class="post-card__link">Read more →</a>
+            </article>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.blog-hero {
+  padding: var(--space-9) 0 var(--space-7);
+  background: var(--surface);
+  border-bottom: var(--hairline) solid var(--border);
+}
+.blog-hero h1 { margin-bottom: var(--space-3); }
+
+.blog-list { padding: var(--space-8) 0 var(--space-9); }
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+.post-card {
+  background: var(--white);
+  border: var(--hairline) solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: box-shadow var(--dur) var(--ease);
+}
+.post-card:hover { box-shadow: var(--shadow-md); }
+
+.post-card__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.post-card__meta time {
+  font-size: var(--text-caption);
+  color: var(--muted);
+  font-weight: 700;
+}
+.post-card__tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--amber);
+  background: var(--amber-tint);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+.post-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: 700;
+  line-height: var(--lh-snug);
+  margin: 0;
+}
+.post-card__title a {
+  color: var(--navy);
+  text-decoration: none;
+  transition: color var(--dur) var(--ease);
+}
+.post-card__title a:hover { color: var(--amber); }
+.post-card__desc {
+  font-size: var(--text-body-sm);
+  color: var(--fg-2);
+  line-height: var(--lh-normal);
+  margin: 0;
+  flex: 1;
+}
+.post-card__link {
+  font-size: var(--text-body-sm);
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+  margin-top: auto;
+  transition: color var(--dur) var(--ease);
+}
+.post-card__link:hover { color: var(--amber); }
+
+.blog-empty {
+  padding: var(--space-8);
+  text-align: center;
+  color: var(--muted);
+  font-size: var(--text-body-sm);
+}
+
+@media (max-width: 900px) { .post-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .post-grid { grid-template-columns: 1fr; } }
+</style>

@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+import '../../styles/prose.css';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+function readingTime(body: string) {
+  const words = body.split(/\s+/).length;
+  return Math.ceil(words / 200);
+}
+---
+<BaseLayout title={post.data.title} description={post.data.description}>
+
+  <article class="post-page">
+    <header class="post-header">
+      <div class="container-narrow">
+        {post.data.tags && post.data.tags.length > 0 && (
+          <p class="eyebrow">{post.data.tags[0]}</p>
+        )}
+        <h1>{post.data.title}</h1>
+        <div class="post-meta">
+          <span>
+            <time datetime={post.data.pubDate.toISOString()}>
+              {formatDate(post.data.pubDate)}
+            </time>
+          </span>
+          <span>{readingTime(post.body)} min read</span>
+          <span>Nathan Spells</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="post-body">
+      <div class="container-narrow">
+        <div class="prose">
+          <Content />
+        </div>
+      </div>
+    </div>
+
+    <footer class="post-footer">
+      <div class="container-narrow">
+        <div class="post-cta">
+          <p class="eyebrow">Want the full picture?</p>
+          <h3>The Legit Launch covers all of this — in order, before your first product.</h3>
+          <a href="/course" class="btn btn-primary">See the Course</a>
+        </div>
+        <a href="/blog" class="post-back">← Back to Blog</a>
+      </div>
+    </footer>
+  </article>
+
+</BaseLayout>
+
+<style>
+.post-header {
+  padding: var(--space-9) 0 var(--space-6);
+  background: var(--surface);
+  border-bottom: var(--hairline) solid var(--border);
+}
+.post-header h1 {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-h1);
+}
+.post-meta {
+  display: flex;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+  font-size: var(--text-caption);
+  color: var(--muted);
+}
+.post-meta span { font-weight: 700; }
+
+.post-body { padding: var(--space-8) 0; }
+
+.post-footer { padding: var(--space-8) 0 var(--space-9); border-top: var(--hairline) solid var(--border); }
+.post-cta {
+  background: var(--navy-tint);
+  border: var(--hairline) solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-7) var(--space-6);
+  margin-bottom: var(--space-6);
+}
+.post-cta h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  color: var(--navy);
+  margin: var(--space-2) 0 var(--space-5);
+}
+.post-back {
+  font-size: var(--text-body-sm);
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+  transition: color var(--dur) var(--ease);
+}
+.post-back:hover { color: var(--amber); }
+</style>
