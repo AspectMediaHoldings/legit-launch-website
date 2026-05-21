@@ -1,0 +1,174 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+---
+<BaseLayout
+  title="About Nathan Spells"
+  description="Nathan Spells owns Aspect Media Holdings, LLC, a POD business with three active product lines. The Legit Launch is the course he needed but couldn't find."
+>
+
+  <!-- ======================================================
+       HERO
+  ====================================================== -->
+  <section class="about-hero">
+    <div class="container-narrow">
+      <p class="eyebrow">About the instructor</p>
+      <h1>About Nathan Spells</h1>
+      <p class="lead">Owner, Aspect Media Holdings, LLC — Marianna, Florida</p>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       BIO + STORY
+  ====================================================== -->
+  <section class="about-story">
+    <div class="container-narrow">
+      <div class="about-avatar-row">
+        <div class="about-avatar" aria-hidden="true">N</div>
+        <div class="about-intro">
+          <p>
+            I am Nathan. I own Aspect Media Holdings, LLC, a print-on-demand business with three active product lines running on Printify and Etsy.
+            This is not a startup story. I did not build a six-figure business in 90 days.
+            I built the legal and financial foundation correctly, made operational mistakes along the way, and kept detailed records of both — and I built this course from what I actually learned.
+          </p>
+        </div>
+      </div>
+
+      <h2>The Business Behind the Course</h2>
+      <p>
+        What "real business" means in practice: three product lines actively listed, a designer who handles production files, a bookkeeper who runs QuickBooks monthly, and quarterly taxes that get paid on time. That last one used to feel like a high bar. It is not, once the system is in place.
+      </p>
+      <p>
+        Aspect Media Holdings, LLC operates a family matching shirts line, a Dogs and Coffee line, and a Scout Apparel line through Printify. The business has a team: Meghan handles design, Sarah handles bookkeeping. The infrastructure that makes a team possible — the LLC, the EIN, the business bank account, the QuickBooks system — was built before the first product was listed.
+      </p>
+
+      <div class="about-credentials">
+        <div class="credential">
+          <span class="credential__num">3</span>
+          <span class="credential__label">Active product lines on Printify and Etsy</span>
+        </div>
+        <div class="credential">
+          <span class="credential__num">LLC</span>
+          <span class="credential__label">Formed before the first product was listed</span>
+        </div>
+        <div class="credential">
+          <span class="credential__num">18</span>
+          <span class="credential__label">Downloadable resources built from real operations</span>
+        </div>
+      </div>
+
+      <h2>Why I Built This Course</h2>
+      <p>
+        The moment I am most glad I did this correctly came the first time Etsy issued a 1099-K.
+        For anyone who has not been through that: Etsy reports your gross sales to the IRS when you cross the threshold, and you get a form in January.
+        If you do not have your books current, that form is terrifying.
+        You have no idea what portion is taxable, what you can offset with deductions, or whether you have set enough aside.
+      </p>
+      <p>
+        I had the bookkeeping in place. It was a routine close instead of a crisis.
+      </p>
+      <p>
+        That experience is exactly why this course exists. I could not find a course that covered all of it — the entity, the tax setup, the bookkeeping, the operating routine — before sending students to the storefront. Every course I found started at the listing. None of them started at the LLC.
+      </p>
+      <blockquote class="pull-quote">
+        "So I built the one I needed."
+      </blockquote>
+      <p>
+        The Legit Launch covers everything the other courses skip — in the order you actually need it. Legal first, money second, operations third. By the time you design your first product, you have a real business underneath it.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CTA
+  ====================================================== -->
+  <section class="about-cta">
+    <div class="container-narrow">
+      <h2>See the Course</h2>
+      <p>Nine modules. Every step in order. Built from a business that is operating.</p>
+      <CTAButton href="/course" label="See the Course" size="lg" />
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+.about-hero {
+  padding: var(--space-9) 0 var(--space-6);
+  background: var(--surface);
+  border-bottom: var(--hairline) solid var(--border);
+}
+.about-hero h1 { margin-bottom: var(--space-2); }
+
+.about-story { padding: var(--space-8) 0; }
+
+.about-avatar-row {
+  display: flex;
+  gap: var(--space-6);
+  align-items: flex-start;
+  margin-bottom: var(--space-8);
+}
+.about-avatar {
+  flex-shrink: 0;
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-intro p {
+  font-size: var(--text-h4);
+  line-height: var(--lh-normal);
+  color: var(--fg-2);
+  margin: 0;
+}
+
+.about-story h2 { margin-top: var(--space-7); margin-bottom: var(--space-4); }
+.about-story p { max-width: 640px; }
+
+.about-credentials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin: var(--space-7) 0;
+  padding: var(--space-6);
+  background: var(--navy-tint);
+  border-radius: var(--radius-lg);
+}
+.credential { text-align: center; }
+.credential__num {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 48px;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+  letter-spacing: -0.02em;
+}
+.credential__label {
+  font-size: var(--text-caption);
+  color: var(--muted);
+  line-height: var(--lh-normal);
+  text-align: center;
+  display: block;
+}
+
+.about-cta {
+  padding: var(--space-8) 0 var(--space-9);
+  border-top: var(--hairline) solid var(--border);
+  background: var(--surface-alt);
+}
+.about-cta h2 { margin-bottom: var(--space-3); }
+.about-cta p { margin-bottom: var(--space-5); color: var(--fg-2); }
+
+@media (max-width: 768px) {
+  .about-avatar-row { flex-direction: column; }
+  .about-credentials { grid-template-columns: 1fr; }
+}
+</style>
