@@ -3,6 +3,8 @@ import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import '../styles/global.css';
 
+const GA_ID = import.meta.env.PUBLIC_GA_ID;
+
 interface Props {
   title?: string;
   description?: string;
@@ -59,6 +61,19 @@ const fullTitle = title === 'The Legit Launch' ? title : `${title} | The Legit L
     "logo": `${siteUrl}/logos/logo-mark.svg`,
     "contactPoint": { "@type": "ContactPoint", "email": "hello@thelegitlaunch.com" }
   })}></script>
+
+  <!-- GA4 via Partytown (off main thread) — only loads when PUBLIC_GA_ID is set -->
+  {GA_ID && (
+    <>
+      <script type="text/partytown" src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
+      <script type="text/partytown" set:html={`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${GA_ID}');
+      `}></script>
+    </>
+  )}
 </head>
 <body>
   <SiteHeader />
@@ -66,5 +81,24 @@ const fullTitle = title === 'The Legit Launch' ? title : `${title} | The Legit L
     <slot />
   </main>
   <SiteFooter />
+
+  <!-- CTA event tracking — fires on waitlist and future enroll buttons -->
+  <script>
+    document.addEventListener('click', (e) => {
+      const target = (e.target as HTMLElement).closest('a');
+      if (!target) return;
+      const href = target.getAttribute('href') || '';
+      if (href.includes('kit.com') || href.includes('42cf1d5c10')) {
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'waitlist_click', { event_category: 'cta' });
+        }
+      }
+      if (href.includes('payhip.com') && href.includes('checkout')) {
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'enroll_click', { event_category: 'cta' });
+        }
+      }
+    });
+  </script>
 </body>
 </html>
