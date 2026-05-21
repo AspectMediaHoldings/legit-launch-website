@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Message Sent"
+  description="Your message has been received."
+  noIndex={true}
+>
+  <section class="success-page">
+    <div class="container-narrow">
+      <div class="success-box">
+        <div class="success-icon" aria-hidden="true">✓</div>
+        <h1>Message received.</h1>
+        <p>Nathan will reply within 48 business hours at <strong>hello@thelegitlaunch.com</strong>.</p>
+        <p>While you wait — if you have not joined the waitlist yet, that is the best next step.</p>
+        <div class="success-actions">
+          <a href="https://thelegitlaunch.kit.com/42cf1d5c10" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join the Waitlist</a>
+          <a href="/" class="btn btn-secondary">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.success-page {
+  padding: var(--space-9) 0;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+.success-box {
+  background: var(--white);
+  border: var(--hairline) solid var(--border);
+  border-top: 3px solid var(--amber);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-7);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+.success-icon {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--amber);
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-5);
+}
+.success-box h1 { margin-bottom: var(--space-4); }
+.success-box p { color: var(--fg-2); margin-bottom: var(--space-3); max-width: 480px; margin-left: auto; margin-right: auto; }
+.success-actions { display: flex; gap: var(--space-4); justify-content: center; margin-top: var(--space-6); flex-wrap: wrap; }
+</style>
