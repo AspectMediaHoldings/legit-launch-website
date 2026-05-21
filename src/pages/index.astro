@@ -1,9 +1,410 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+import ProblemCard from '../components/ProblemCard.astro';
+import ModulePreviewCard from '../components/ModulePreviewCard.astro';
+import WaitlistForm from '../components/WaitlistForm.astro';
 ---
-<BaseLayout>
-  <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
-    <h1>The Legit Launch</h1>
-    <p class="lead">Build it right from day one.</p>
-  </div>
+<BaseLayout
+  title="The Legit Launch"
+  description="The only print-on-demand course that starts with the legal foundation. LLC, EIN, bookkeeping — before you design a single product."
+>
+
+  <!-- ======================================================
+       HERO
+  ====================================================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow">Build it right from day one</p>
+          <h1 class="display">76% of print-on-demand shops fail.<br>Here's what the gurus won't tell you.</h1>
+          <p class="lead hero__lead">
+            The Legit Launch is the only POD course that starts before the Etsy storefront —
+            with the legal foundation, the tax setup, and the bookkeeping every real business needs.
+          </p>
+          <div class="hero__ctas">
+            <CTAButton href="https://thelegitlaunch.kit.com/42cf1d5c10" label="Join the Waitlist" size="lg" external />
+            <CTAButton href="/course" label="See the Course" variant="secondary" size="lg" />
+          </div>
+        </div>
+        <div class="hero__callout">
+          <p class="hero__callout-label">The course the gurus never built</p>
+          <blockquote>
+            "They showed you how to post a listing before you even had a business."
+          </blockquote>
+          <ul class="hero__stats">
+            <li><strong>9</strong> modules</li>
+            <li><strong>40+</strong> lessons</li>
+            <li><strong>18</strong> downloadable resources</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       THE PROBLEM
+  ====================================================== -->
+  <section class="section-problem">
+    <div class="container">
+      <p class="eyebrow">Why most POD shops fail</p>
+      <h2>Other courses start at the listing.<br>That's the middle of the story.</h2>
+      <div class="problem-grid">
+        <ProblemCard
+          icon="⚖️"
+          heading="No LLC"
+          body="No legal separation between you and your business. A dispute, a return gone wrong, or a copyright claim can reach your personal assets."
+        />
+        <ProblemCard
+          icon="🔢"
+          heading="No EIN"
+          body="You are doing business under your Social Security number. Every supplier form, every tax document — your SSN is on it."
+        />
+        <ProblemCard
+          icon="📊"
+          heading="No bookkeeping"
+          body="Etsy sends a 1099-K. You have no records, no expense tracking, no idea what you owe. Tax season becomes a crisis instead of a routine."
+        />
+      </div>
+      <p class="problem-note">
+        None of these failures show up on day one. They show up months later — when something goes wrong, when tax season hits, or when you try to scale and discover you have no records.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       THE SOLUTION
+  ====================================================== -->
+  <section class="section-solution">
+    <div class="container">
+      <h2>The Legit Launch starts before all of that.</h2>
+      <blockquote class="pull-quote">
+        "This is the course the gurus never built because they started at the storefront and told you that was the beginning. It was not the beginning."
+      </blockquote>
+      <ul class="solution-list">
+        <li>
+          <span class="check">✓</span>
+          <div>
+            <strong>Legal entity before your first product.</strong>
+            LLC formation, EIN from the IRS, business bank account, and licenses — Module 1 covers all of it.
+          </div>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <div>
+            <strong>Tax setup that survives your first 1099-K.</strong>
+            QuickBooks, deductible expenses, self-employment tax, and quarterly payments — before money moves.
+          </div>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <div>
+            <strong>Bookkeeping you can run yourself or hand off.</strong>
+            A monthly close routine built around the way POD businesses actually operate.
+          </div>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <div>
+            <strong>Complete platform operations from Printify to Etsy.</strong>
+            Provider selection, QC checkpoints, pricing formula, listing SEO, and a 90-day launch plan.
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       COURSE SNAPSHOT
+  ====================================================== -->
+  <section class="section-modules">
+    <div class="container">
+      <p class="eyebrow">What's inside</p>
+      <h2>9 modules. 40+ lessons. 18 downloadable resources.</h2>
+      <div class="modules-grid">
+        <ModulePreviewCard
+          number="0"
+          title="Before You Spend a Dime"
+          description="What POD actually is, whether it is the right fit for you, and what it actually costs to start. The honest version."
+        />
+        <ModulePreviewCard
+          number="1"
+          title="Build It Legal From Day One"
+          description="LLC formation, EIN from the IRS, business bank account, DBA, and business licenses. The foundation no other course builds."
+        />
+        <ModulePreviewCard
+          number="2"
+          title="Set Up Your Money Right"
+          description="QuickBooks, deductible expenses, self-employment tax, quarterly payments, your 1099-K from Etsy, and the monthly close routine."
+        />
+      </div>
+      <div class="modules-footer">
+        <a href="/course#modules" class="modules-link">See all 9 modules →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       INSTRUCTOR
+  ====================================================== -->
+  <section class="section-instructor">
+    <div class="container">
+      <div class="instructor-inner">
+        <div class="instructor-avatar" aria-hidden="true">N</div>
+        <div class="instructor-content">
+          <p class="eyebrow">About the instructor</p>
+          <h2>Real operations. Real experience.</h2>
+          <p>
+            Nathan Spells owns Aspect Media Holdings, LLC, a print-on-demand business with three active product lines operating on Printify and Etsy.
+            He set up the LLC, EIN, and business bank account before listing a single product.
+            He built this course because he could not find one that told the full truth about what building a real POD business actually requires.
+          </p>
+          <p>This is not theory. Every lesson comes from a business that is operating.</p>
+          <a href="/about" class="instructor-link">Read Nathan's full story →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SOCIAL PROOF (scaffolded — awaiting launch)
+  ====================================================== -->
+  <section class="section-proof">
+    <div class="container">
+      <div class="proof-placeholder">
+        <p class="eyebrow">Student results</p>
+        <p>Testimonials coming at launch. Check back soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FINAL CTA
+  ====================================================== -->
+  <section class="section-cta-final">
+    <div class="container">
+      <div class="cta-final-inner">
+        <p class="eyebrow" style="color:rgba(255,255,255,0.6)">Join the waitlist</p>
+        <h2>Ready to build it right?</h2>
+        <p class="cta-final-sub">
+          Course opens late 2026. Waitlist members get first access and the early-bird price — the lowest this course will ever be offered.
+        </p>
+        <WaitlistForm dark />
+      </div>
+    </div>
+  </section>
+
 </BaseLayout>
+
+<style>
+/* ---- Hero ---- */
+.hero {
+  padding: var(--space-9) 0 var(--space-8);
+  background: var(--surface);
+  border-bottom: var(--hairline) solid var(--border);
+}
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-8);
+  align-items: start;
+}
+.hero .display { margin-bottom: var(--space-5); }
+.hero__lead { margin-bottom: var(--space-6); max-width: 560px; }
+.hero__ctas { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+
+.hero__callout {
+  background: var(--white);
+  border: var(--hairline) solid var(--border);
+  border-top: 3px solid var(--amber);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  margin-top: var(--space-6);
+}
+.hero__callout-label {
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--amber);
+  margin: 0 0 var(--space-3);
+}
+.hero__callout blockquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-h3);
+  color: var(--navy);
+  line-height: var(--lh-snug);
+  margin: 0 0 var(--space-5);
+  padding: 0;
+  border: none;
+}
+.hero__stats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.hero__stats li {
+  font-size: var(--text-body-sm);
+  color: var(--muted);
+}
+.hero__stats strong {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  color: var(--navy);
+  margin-right: var(--space-2);
+  line-height: 1;
+}
+
+/* ---- Problem ---- */
+.section-problem {
+  padding: var(--space-9) 0;
+  background: var(--amber-tint);
+}
+.section-problem h2 { margin-bottom: var(--space-7); }
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+.problem-note {
+  font-size: var(--text-body-sm);
+  color: var(--fg-2);
+  max-width: 640px;
+  border-left: 3px solid var(--amber);
+  padding-left: var(--space-4);
+  margin: 0;
+  line-height: var(--lh-normal);
+}
+
+/* ---- Solution ---- */
+.section-solution { padding: var(--space-9) 0; }
+.section-solution h2 { margin-bottom: var(--space-5); }
+.solution-list {
+  list-style: none;
+  margin: var(--space-6) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 680px;
+}
+.solution-list li {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+.check {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  background: var(--amber);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+.solution-list strong { color: var(--navy); }
+.solution-list p { margin: 0; }
+
+/* ---- Modules ---- */
+.section-modules {
+  padding: var(--space-9) 0;
+  background: var(--surface-alt);
+}
+.section-modules h2 { margin-bottom: var(--space-7); }
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin-bottom: var(--space-5);
+}
+.modules-footer { text-align: center; }
+.modules-link {
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color var(--dur) var(--ease);
+}
+.modules-link:hover { color: var(--amber); }
+
+/* ---- Instructor ---- */
+.section-instructor { padding: var(--space-9) 0; }
+.instructor-inner {
+  display: flex;
+  gap: var(--space-7);
+  align-items: flex-start;
+  max-width: 800px;
+}
+.instructor-avatar {
+  flex-shrink: 0;
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.instructor-content h2 { margin-bottom: var(--space-4); }
+.instructor-content p { max-width: 600px; }
+.instructor-link {
+  font-size: var(--text-body-sm);
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+  transition: color var(--dur) var(--ease);
+}
+.instructor-link:hover { color: var(--amber); }
+
+/* ---- Social proof placeholder ---- */
+.section-proof { padding: var(--space-7) 0; }
+.proof-placeholder {
+  background: var(--surface-alt);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+  padding: var(--space-6) var(--space-5);
+  text-align: center;
+  color: var(--muted);
+}
+.proof-placeholder .eyebrow { margin-bottom: var(--space-2); }
+.proof-placeholder p:last-child { margin: 0; font-size: var(--text-body-sm); }
+
+/* ---- Final CTA ---- */
+.section-cta-final {
+  background: var(--navy);
+  padding: var(--space-9) 0;
+}
+.cta-final-inner { max-width: 600px; }
+.section-cta-final h2 { color: var(--white); margin-bottom: var(--space-4); }
+.cta-final-sub {
+  color: rgba(255,255,255,0.7);
+  margin-bottom: var(--space-6);
+  font-size: var(--text-h4);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .hero__inner { grid-template-columns: 1fr; }
+  .hero__callout { margin-top: 0; }
+  .problem-grid { grid-template-columns: 1fr; }
+  .modules-grid { grid-template-columns: 1fr; }
+  .instructor-inner { flex-direction: column; }
+}
+</style>

@@ -1,0 +1,55 @@
+---
+interface Props {
+  number: string;
+  title: string;
+  description: string;
+}
+const { number, title, description } = Astro.props;
+---
+<div class="module-preview">
+  <div class="module-preview__bar">
+    <span class="module-preview__num">Module {number}</span>
+  </div>
+  <div class="module-preview__body">
+    <h4>{title}</h4>
+    <p>{description}</p>
+  </div>
+</div>
+
+<style>
+.module-preview {
+  background: var(--white);
+  border: var(--hairline) solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.module-preview__bar {
+  background: var(--navy);
+  padding: var(--space-2) var(--space-4);
+}
+.module-preview__num {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+}
+.module-preview__body {
+  padding: var(--space-5);
+}
+.module-preview h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-h4);
+  color: var(--navy);
+  margin: 0 0 var(--space-2);
+}
+.module-preview p {
+  font-size: var(--text-body-sm);
+  color: var(--fg-2);
+  margin: 0;
+  line-height: var(--lh-normal);
+}
+</style>

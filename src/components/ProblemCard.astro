@@ -1,0 +1,41 @@
+---
+interface Props {
+  icon: string;
+  heading: string;
+  body: string;
+}
+const { icon, heading, body } = Astro.props;
+---
+<div class="problem-card">
+  <div class="problem-card__icon">{icon}</div>
+  <h3>{heading}</h3>
+  <p>{body}</p>
+</div>
+
+<style>
+.problem-card {
+  background: var(--navy-tint);
+  border: var(--hairline) solid var(--border);
+  border-left: 3px solid var(--navy);
+  border-radius: var(--radius);
+  padding: var(--space-6) var(--space-5);
+}
+.problem-card__icon {
+  font-size: 28px;
+  margin-bottom: var(--space-3);
+  line-height: 1;
+}
+.problem-card h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--text-h4);
+  color: var(--navy);
+  margin: 0 0 var(--space-2);
+}
+.problem-card p {
+  font-size: var(--text-body-sm);
+  color: var(--fg-2);
+  margin: 0;
+  line-height: var(--lh-normal);
+}
+</style>
