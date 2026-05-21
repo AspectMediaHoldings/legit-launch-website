@@ -1,0 +1,70 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+}
+
+const {
+  title = 'The Legit Launch',
+  description = 'The only print-on-demand course that starts with the legal foundation. LLC, EIN, bookkeeping — before you design a single product.',
+  ogImage = '/og-image.png',
+  noIndex = false,
+} = Astro.props;
+
+const siteUrl = 'https://www.thelegitlaunch.com';
+const canonical = `${siteUrl}${Astro.url.pathname}`;
+const fullTitle = title === 'The Legit Launch' ? title : `${title} | The Legit Launch`;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content={Astro.generator}>
+
+  <title>{fullTitle}</title>
+  <meta name="description" content={description}>
+  {noIndex && <meta name="robots" content="noindex">}
+
+  <link rel="canonical" href={canonical}>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={fullTitle}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonical}>
+  <meta property="og:type" content="website">
+  <meta property="og:image" content={`${siteUrl}${ogImage}`}>
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={fullTitle}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={`${siteUrl}${ogImage}`}>
+
+  <!-- Structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "The Legit Launch",
+    "url": siteUrl,
+    "logo": `${siteUrl}/logos/logo-mark.svg`,
+    "contactPoint": { "@type": "ContactPoint", "email": "hello@thelegitlaunch.com" }
+  })}></script>
+</head>
+<body>
+  <SiteHeader />
+  <main>
+    <slot />
+  </main>
+  <SiteFooter />
+</body>
+</html>

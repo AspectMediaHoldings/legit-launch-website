@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="The Legit Launch horizontal lockup">
+  <!-- Mark -->
+  <rect x="0" y="10" width="180" height="180" rx="14" fill="#1A3060"></rect>
+  <text x="90" y="128" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-weight="700" font-size="100" letter-spacing="11"><tspan fill="#C8881A">L</tspan><tspan fill="#FAFAF7">L</tspan></text>
+  <line x1="57" y1="152" x2="123" y2="152" stroke="#C8881A" stroke-width="5"></line>
+  <!-- Wordmark -->
+  <text x="210" y="112" font-family="Playfair Display, Georgia, serif" font-weight="700" font-size="86" fill="#1A3060">The Legit Launch</text>
+  <line x1="210" y1="138" x2="288" y2="138" stroke="#C8881A" stroke-width="5"></line>
+  <text x="303" y="163" font-family="Lato, Arial, sans-serif" font-weight="700" font-size="26" fill="#3A3A3A" letter-spacing="3">BUILD IT RIGHT FROM DAY ONE</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" role="img" aria-label="The Legit Launch">
+  <defs>
+    
+  </defs>
+  <text x="0" y="56" class="display" font-size="48" fill="#1A3060">The Legit Launch</text>
+  <line x1="0" y1="72" x2="42" y2="72" stroke="#C8881A" stroke-width="3"></line>
+  <text x="52" y="82" class="label" font-size="15" fill="#3A3A3A">BUILD IT RIGHT FROM DAY ONE</text>
+</svg>

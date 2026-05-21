@@ -1,0 +1,16 @@
+---
+interface Props {
+  href: string;
+  label: string;
+  variant?: 'primary' | 'secondary' | 'secondary-white';
+  size?: 'default' | 'lg';
+  external?: boolean;
+}
+const { href, label, variant = 'primary', size = 'default', external = false } = Astro.props;
+const cls = `btn btn-${variant}${size === 'lg' ? ' btn-lg' : ''}`;
+---
+<a
+  href={href}
+  class={cls}
+  {...external ? { target: '_blank', rel: 'noopener noreferrer' } : {}}
+>{label}</a>

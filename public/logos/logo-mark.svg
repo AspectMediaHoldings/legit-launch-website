@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="The Legit Launch monogram">
+  <rect x="2" y="2" width="96" height="96" rx="8" fill="#1A3060"></rect>
+  <text x="50" y="68" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-weight="700" font-size="56" letter-spacing="6"><tspan fill="#C8881A">L</tspan><tspan fill="#FAFAF7">L</tspan></text>
+  <line x1="32" y1="80" x2="68" y2="80" stroke="#C8881A" stroke-width="3"></line>
+</svg>
