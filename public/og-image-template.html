@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    background: #1A3060;
+    font-family: 'Lato', Arial, sans-serif;
+    display: flex; align-items: center;
+  }
+  .card {
+    width: 100%; height: 100%;
+    display: flex; align-items: center;
+    padding: 72px 80px;
+    gap: 64px;
+    position: relative;
+  }
+  .card::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 320px;
+    background: rgba(200,136,26,0.08);
+  }
+  .left { flex: 1; }
+  .eyebrow {
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: #C8881A; margin-bottom: 20px;
+  }
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 52px; font-weight: 700;
+    color: #FAFAF7; line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 28px;
+  }
+  .tagline {
+    font-size: 18px; color: rgba(255,255,255,0.65);
+    line-height: 1.5; max-width: 480px;
+  }
+  .rule {
+    width: 48px; height: 3px;
+    background: #C8881A; margin-bottom: 24px;
+  }
+  .mark {
+    flex-shrink: 0;
+    width: 160px; height: 160px;
+  }
+  .domain {
+    position: absolute; bottom: 40px; left: 80px;
+    font-size: 13px; color: rgba(255,255,255,0.35);
+    letter-spacing: 0.06em;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="left">
+    <p class="eyebrow">Build it right from day one</p>
+    <h1>The Legit Launch</h1>
+    <div class="rule"></div>
+    <p class="tagline">The only print-on-demand course that starts with the legal foundation — LLC, EIN, bookkeeping — before your first product.</p>
+  </div>
+  <img class="mark" src="/logos/logo-mark.svg" alt="">
+  <p class="domain">thelegitlaunch.com</p>
+</div>
+</body>
+</html>

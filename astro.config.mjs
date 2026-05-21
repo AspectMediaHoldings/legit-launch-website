@@ -7,5 +7,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [mdx(), sitemap()]
+  site: 'https://www.thelegitlaunch.com',
+  integrations: [mdx(), sitemap()],
 });

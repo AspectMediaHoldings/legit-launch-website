@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Page Not Found"
+  description="This page doesn't exist."
+  noIndex={true}
+>
+  <section class="not-found">
+    <div class="container-narrow">
+      <p class="not-found__code eyebrow">404</p>
+      <h1>Page not found.</h1>
+      <p class="lead">That page doesn't exist or may have moved.</p>
+      <div class="not-found__actions">
+        <a href="/" class="btn btn-primary">Back to Home</a>
+        <a href="/course" class="btn btn-secondary">See the Course</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.not-found {
+  padding: var(--space-9) 0;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+.not-found__code { font-size: var(--text-h1); color: var(--amber); margin-bottom: var(--space-3); }
+.not-found h1 { margin-bottom: var(--space-3); }
+.not-found .lead { margin-bottom: var(--space-7); }
+.not-found__actions { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+</style>
