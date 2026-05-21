@@ -1,0 +1,87 @@
+---
+interface Props {
+  number: string;
+  title: string;
+  description: string;
+  lessons?: string;
+  deliverable?: string;
+}
+const { number, title, description, lessons, deliverable } = Astro.props;
+---
+<div class="module-card">
+  <div class="module-card__bar">
+    <span class="module-card__num">Module {number}</span>
+    {lessons && <span class="module-card__lessons">{lessons}</span>}
+  </div>
+  <div class="module-card__body">
+    <h3>{title}</h3>
+    <p>{description}</p>
+    {deliverable && (
+      <p class="module-card__deliverable">
+        <span class="deliverable-label">Includes:</span> {deliverable}
+      </p>
+    )}
+  </div>
+</div>
+
+<style>
+.module-card {
+  background: var(--white);
+  border: var(--hairline) solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--dur) var(--ease);
+}
+.module-card:hover { box-shadow: var(--shadow-md); }
+.module-card__bar {
+  background: var(--navy);
+  padding: var(--space-3) var(--space-5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.module-card__num {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+}
+.module-card__lessons {
+  font-size: var(--text-label);
+  color: var(--amber);
+  font-weight: 700;
+}
+.module-card__body { padding: var(--space-5); }
+.module-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-h4);
+  color: var(--navy);
+  margin: 0 0 var(--space-3);
+  line-height: var(--lh-snug);
+}
+.module-card p {
+  font-size: var(--text-body-sm);
+  color: var(--fg-2);
+  margin: 0;
+  line-height: var(--lh-normal);
+}
+.module-card__deliverable {
+  margin-top: var(--space-3) !important;
+  font-size: var(--text-caption) !important;
+  color: var(--muted) !important;
+  border-top: var(--hairline) solid var(--border);
+  padding-top: var(--space-3);
+}
+.deliverable-label {
+  font-weight: 700;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 10px;
+  margin-right: 4px;
+}
+</style>

@@ -1,0 +1,428 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ModuleCard from '../components/ModuleCard.astro';
+import PricingCard from '../components/PricingCard.astro';
+import WaitlistForm from '../components/WaitlistForm.astro';
+---
+<BaseLayout
+  title="The Course"
+  description="9 modules, 40+ lessons covering LLC formation, taxes, bookkeeping, Printify, Etsy, and a 90-day launch plan. Build your POD business right."
+>
+
+  <!-- ======================================================
+       HERO
+  ====================================================== -->
+  <section class="course-hero">
+    <div class="container-narrow">
+      <p class="eyebrow">The Legit Launch Course</p>
+      <h1 class="display">76% of print-on-demand shops fail.<br>Here's what the gurus won't tell you.</h1>
+      <p class="lead">
+        The only POD course that starts where every other course stops — the legal foundation,
+        the tax setup, the bookkeeping — before you touch a design tool or open an Etsy shop.
+      </p>
+      <WaitlistForm />
+    </div>
+  </section>
+
+  <!-- ======================================================
+       OPENING ARGUMENT
+  ====================================================== -->
+  <section class="course-argument">
+    <div class="container-narrow">
+      <p>
+        The print-on-demand market is growing. $13 billion today. 26% annual growth rate. There is real money being made.
+      </p>
+      <p>
+        But three out of four shops that open will close.
+      </p>
+      <p>
+        The gurus tell you the problem is your niche. Or your designs. Or your marketing strategy. That is not the problem.
+      </p>
+      <p>
+        The problem is that most POD courses start at the Etsy storefront and never go back to the beginning. They skip the legal foundation. They skip the tax setup. They skip the bookkeeping. They show you how to post a listing before you even have a business.
+      </p>
+      <div class="argument-list">
+        <p><strong>No LLC</strong> means your personal assets are exposed when a dispute happens.</p>
+        <p><strong>No EIN</strong> means you are doing business under your Social Security number.</p>
+        <p><strong>No business bank account</strong> means the IRS cannot distinguish your business income from your personal spending.</p>
+        <p><strong>No bookkeeping</strong> means the 1099-K from Etsy arrives at tax time and you have no idea what you owe.</p>
+      </div>
+      <p>None of these failures show up on day one. They show up months later — when something goes wrong, when tax season hits, or when you try to scale and discover you have no records.</p>
+      <blockquote class="pull-quote">
+        "The Legit Launch starts before all of that. This is the course the gurus never built because they started at the storefront and told you that was the beginning. It was not the beginning."
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       WHO THIS IS FOR
+  ====================================================== -->
+  <section class="course-for">
+    <div class="container">
+      <h2>Is This Course Right for You?</h2>
+      <div class="for-grid">
+        <div class="for-col for-col--yes">
+          <h3>This course is for you if</h3>
+          <ul>
+            <li>You have been watching POD content and you are interested but skeptical</li>
+            <li>You want to do this legally and correctly the first time, not fix it later</li>
+            <li>You are a working adult who needs a realistic picture of what this takes</li>
+            <li>You have seen the $40 startup claims and something did not add up</li>
+            <li>You want a complete business, not just a shop</li>
+          </ul>
+        </div>
+        <div class="for-col for-col--no">
+          <h3>This course is not for you if</h3>
+          <ul>
+            <li>You are looking for a passive income shortcut</li>
+            <li>You want a course that promises results without the work</li>
+            <li>You are not willing to spend the first module on business and legal setup</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       MODULES
+  ====================================================== -->
+  <section class="course-modules" id="modules">
+    <div class="container">
+      <p class="eyebrow">What you get</p>
+      <h2>9 modules. 40+ lessons. 18 downloadable resources.</h2>
+      <div class="modules-full-grid">
+        <ModuleCard
+          number="0"
+          title="Before You Spend a Dime"
+          lessons="3 lessons"
+          description="What POD actually is, whether it is the right fit for you, and what it actually costs to start. The honest version — not the highlight reel."
+          deliverable="POD Readiness Worksheet, Startup Cost Calculator"
+        />
+        <ModuleCard
+          number="1"
+          title="Build It Legal From Day One"
+          lessons="6 lessons"
+          description="LLC formation, EIN from the IRS, business bank account, DBA, and business licenses. This is the foundation no other POD course builds."
+          deliverable="Business Formation Checklist, EIN Walkthrough, Bank Account Checklist"
+        />
+        <ModuleCard
+          number="2"
+          title="Set Up Your Money Right"
+          lessons="6 lessons"
+          description="QuickBooks setup, deductible expenses, self-employment tax, quarterly estimated payments, your 1099-K from Etsy, and the monthly close routine."
+          deliverable="QuickBooks Setup Guide, Deduction Reference Sheet, Quarterly Tax Calendar"
+        />
+        <ModuleCard
+          number="3"
+          title="Find Your Niche"
+          lessons="5 lessons"
+          description="Niche selection criteria, free research tools (eRank, Etsy search, Google Trends), demand validation, and real examples from three active product lines."
+          deliverable="Niche Selection Worksheet, Free Research Tools Reference Guide"
+        />
+        <ModuleCard
+          number="4"
+          title="Design Fundamentals"
+          lessons="6 lessons"
+          description="Canva setup, file specs for Printify (PNG, 300 DPI, transparent background, RGB), design batching workflow, and when to hire a designer."
+          deliverable="Design File Specification Sheet, Canva Template Pack, Design Brief Template"
+        />
+        <ModuleCard
+          number="5"
+          title="Printify Setup and Operations"
+          lessons="8 lessons"
+          description="Provider selection, account setup, product selection, design upload, sample orders, 3-checkpoint quality control, and the 2.5x-3x pricing formula."
+          deliverable="Print Provider Evaluation Scorecard, QC Checkpoint Checklist, Pricing Calculator"
+        />
+        <ModuleCard
+          number="6"
+          title="Etsy Shop Setup"
+          lessons="8 lessons"
+          description="Open your shop under your LLC, branding, connect Printify, listing SEO, mockup strategy, fee structure, shipping, and shop policies."
+          deliverable="Etsy Shop Setup Checklist, Listing Optimization Checklist, Shop Policy Template"
+        />
+        <ModuleCard
+          number="7"
+          title="Running the Business Day to Day"
+          lessons="6 lessons"
+          description="Daily and weekly operating routine, customer service, reprints and refunds, monthly bookkeeping close, quarterly taxes, and when to hire."
+          deliverable="Weekly Operating Checklist, Customer Service Templates, Monthly Business Review Template"
+        />
+        <ModuleCard
+          number="8"
+          title="Growth and Your 90-Day Launch Plan"
+          lessons="5 lessons"
+          description="Etsy analytics, product line expansion, Pinterest and social content, second sales channel strategy, and your personal 90-day launch plan."
+          deliverable="Etsy Stats Guide, 90-Day Launch Plan Template, Pinterest Strategy Guide"
+        />
+      </div>
+      <div class="modules-bonus">
+        <p class="eyebrow">Also included</p>
+        <div class="bonus-grid">
+          <div class="bonus-item">
+            <strong>Bonus A:</strong> Canva Deep Dive — advanced techniques, templates, and design batching for Printify
+          </div>
+          <div class="bonus-item">
+            <strong>Bonus B:</strong> Printify Advanced — premium provider access, production management, scaling orders
+          </div>
+          <div class="bonus-item">
+            <strong>Bonus C:</strong> Etsy Advanced — promoted listings, shop stats analysis, algorithm strategy
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       INSTRUCTOR
+  ====================================================== -->
+  <section class="course-instructor">
+    <div class="container-narrow">
+      <p class="eyebrow">About Nathan Spells</p>
+      <div class="instructor-bio">
+        <div class="instructor-bio__avatar" aria-hidden="true">N</div>
+        <div>
+          <h2>This is not theory.</h2>
+          <p>
+            Nathan Spells owns Aspect Media Holdings, LLC, a print-on-demand business with three active product lines operating on Printify and Etsy. He set up the LLC, EIN, and business bank account before listing a single product. He built the bookkeeping system, runs the monthly close, and handles the quarterly estimated tax payments.
+          </p>
+          <p>
+            He built this course because he could not find one that told the full truth about what building a real POD business actually requires. Every lesson comes from a business that is operating.
+          </p>
+          <a href="/about" class="instructor-link">Read the full story →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       PRICING
+  ====================================================== -->
+  <section class="course-pricing" id="pricing">
+    <div class="container-narrow">
+      <p class="eyebrow">Enrollment</p>
+      <h2>Lock in the early-bird price.</h2>
+      <p class="pricing-lead">
+        Join the waitlist now. When the course launches, waitlist members get first access and 30 days to enroll at $97 — the lowest this course will ever be.
+      </p>
+      <PricingCard />
+    </div>
+  </section>
+
+  <!-- ======================================================
+       GUARANTEE
+  ====================================================== -->
+  <section class="course-guarantee">
+    <div class="container-narrow">
+      <div class="guarantee-box">
+        <h3>30-Day Money-Back Guarantee</h3>
+        <p>
+          If you go through the course material and feel it did not deliver what was promised, email
+          <a href="mailto:hello@thelegitlaunch.com">hello@thelegitlaunch.com</a> within 30 days of your purchase date and you will receive a full refund.
+          No hoops, no questionnaire. The guarantee exists because this course was built to deliver what it says it delivers, and that confidence runs both ways.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SOCIAL PROOF (placeholder)
+  ====================================================== -->
+  <section class="course-proof">
+    <div class="container-narrow">
+      <div class="proof-placeholder">
+        <p class="eyebrow">Student results</p>
+        <p>Testimonials coming at launch. Check back soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FINAL CTA
+  ====================================================== -->
+  <section class="course-final-cta">
+    <div class="container-narrow">
+      <h2>Ready to build it right?</h2>
+      <WaitlistForm />
+    </div>
+  </section>
+
+  <!-- ======================================================
+       DISCLAIMER
+  ====================================================== -->
+  <section class="course-disclaimer">
+    <div class="container-narrow">
+      <p>
+        This course covers general business and financial topics based on real operational experience.
+        It is not legal advice. Consult a licensed attorney for legal questions specific to your situation.
+        It is not tax advice. Consult a licensed CPA or tax professional for tax questions specific to your situation.
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+/* Hero */
+.course-hero {
+  padding: var(--space-9) 0 var(--space-7);
+  background: var(--surface);
+  border-bottom: var(--hairline) solid var(--border);
+}
+.course-hero .display { margin-bottom: var(--space-5); }
+.course-hero .lead { margin-bottom: var(--space-6); }
+
+/* Opening argument */
+.course-argument {
+  padding: var(--space-8) 0;
+  border-bottom: var(--hairline) solid var(--border);
+}
+.course-argument p { font-size: var(--text-h4); line-height: var(--lh-normal); color: var(--fg-2); }
+.course-argument strong { color: var(--navy); }
+.argument-list {
+  background: var(--navy-tint);
+  border-left: 3px solid var(--navy);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: var(--space-5);
+  margin: var(--space-5) 0;
+}
+.argument-list p { font-size: var(--text-body) !important; margin-bottom: var(--space-3); }
+.argument-list p:last-child { margin-bottom: 0; }
+
+/* Who it's for */
+.course-for { padding: var(--space-8) 0; background: var(--surface-alt); }
+.course-for h2 { margin-bottom: var(--space-6); }
+.for-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); }
+.for-col h3 {
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  font-weight: 700;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+}
+.for-col--yes h3 { color: var(--success); }
+.for-col--no h3 { color: var(--danger); }
+.for-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
+.for-col li {
+  font-size: var(--text-body-sm);
+  color: var(--fg-2);
+  padding-left: var(--space-5);
+  position: relative;
+  line-height: var(--lh-normal);
+}
+.for-col--yes li::before { content: "✓"; position: absolute; left: 0; color: var(--success); font-weight: 700; }
+.for-col--no li::before { content: "✕"; position: absolute; left: 0; color: var(--danger); font-weight: 700; }
+
+/* Modules */
+.course-modules { padding: var(--space-9) 0; }
+.course-modules h2 { margin-bottom: var(--space-7); }
+.modules-full-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin-bottom: var(--space-7);
+}
+.modules-bonus {
+  background: var(--navy-tint);
+  border-radius: var(--radius);
+  padding: var(--space-6);
+}
+.modules-bonus .eyebrow { margin-bottom: var(--space-4); }
+.bonus-grid { display: flex; flex-direction: column; gap: var(--space-3); }
+.bonus-item {
+  font-size: var(--text-body-sm);
+  color: var(--fg-2);
+  line-height: var(--lh-normal);
+}
+.bonus-item strong { color: var(--navy); }
+
+/* Instructor */
+.course-instructor { padding: var(--space-8) 0; background: var(--surface-alt); }
+.instructor-bio {
+  display: flex;
+  gap: var(--space-6);
+  align-items: flex-start;
+  margin-top: var(--space-5);
+}
+.instructor-bio__avatar {
+  flex-shrink: 0;
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.instructor-bio h2 { margin-bottom: var(--space-3); }
+.instructor-bio p { font-size: var(--text-body); }
+.instructor-link {
+  font-size: var(--text-body-sm);
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+  transition: color var(--dur) var(--ease);
+}
+.instructor-link:hover { color: var(--amber); }
+
+/* Pricing */
+.course-pricing { padding: var(--space-9) 0; }
+.course-pricing h2 { margin-bottom: var(--space-3); }
+.pricing-lead { margin-bottom: var(--space-7); font-size: var(--text-h4); color: var(--fg-2); max-width: 560px; }
+
+/* Guarantee */
+.course-guarantee { padding: var(--space-7) 0; background: var(--surface-alt); }
+.guarantee-box {
+  background: var(--white);
+  border: var(--hairline) solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-6);
+}
+.guarantee-box h3 {
+  font-family: var(--font-body);
+  font-size: var(--text-h4);
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 var(--space-3);
+}
+.guarantee-box p { font-size: var(--text-body-sm); color: var(--fg-2); margin: 0; line-height: var(--lh-normal); }
+
+/* Proof placeholder */
+.course-proof { padding: var(--space-6) 0; }
+.proof-placeholder {
+  background: var(--surface-alt);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+  padding: var(--space-6);
+  text-align: center;
+  color: var(--muted);
+}
+.proof-placeholder .eyebrow { margin-bottom: var(--space-2); }
+.proof-placeholder p:last-child { margin: 0; font-size: var(--text-body-sm); }
+
+/* Final CTA */
+.course-final-cta { padding: var(--space-8) 0; }
+.course-final-cta h2 { margin-bottom: var(--space-5); }
+
+/* Disclaimer */
+.course-disclaimer {
+  padding: var(--space-6) 0 var(--space-8);
+  border-top: var(--hairline) solid var(--border);
+}
+.course-disclaimer p {
+  font-size: var(--text-caption);
+  color: var(--muted);
+  line-height: var(--lh-normal);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .modules-full-grid { grid-template-columns: 1fr; }
+  .for-grid { grid-template-columns: 1fr; }
+  .instructor-bio { flex-direction: column; }
+}
+</style>

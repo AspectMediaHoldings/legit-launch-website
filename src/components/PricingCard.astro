@@ -1,0 +1,101 @@
+---
+---
+<div class="pricing-card">
+  <div class="pricing-card__badge">Waitlist Price</div>
+  <div class="pricing-card__price">
+    <span class="pricing-card__amount">$97</span>
+    <span class="pricing-card__note">one-time, lifetime access</span>
+  </div>
+  <div class="pricing-card__compare">
+    Full price after launch: <s>$197</s>
+  </div>
+  <ul class="pricing-card__includes">
+    <li>9 modules, 40+ lessons</li>
+    <li>18 downloadable worksheets and checklists</li>
+    <li>Lifetime access and all future updates</li>
+    <li>30-day money-back guarantee</li>
+  </ul>
+  <a
+    href="https://thelegitlaunch.kit.com/42cf1d5c10"
+    class="btn btn-primary btn-lg pricing-card__cta"
+    target="_blank"
+    rel="noopener noreferrer"
+  >Join the Waitlist — Lock In $97</a>
+  <p class="pricing-card__sub">Course opens late 2026. Waitlist locks in the early-bird price for 30 days after launch.</p>
+</div>
+
+<style>
+.pricing-card {
+  background: var(--amber-tint);
+  border: 2px solid var(--amber);
+  border-radius: var(--radius-lg);
+  padding: var(--space-7) var(--space-6);
+  text-align: center;
+  max-width: 440px;
+  margin: 0 auto;
+}
+.pricing-card__badge {
+  display: inline-block;
+  background: var(--amber);
+  color: var(--white);
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-5);
+}
+.pricing-card__price {
+  margin-bottom: var(--space-3);
+}
+.pricing-card__amount {
+  font-family: var(--font-display);
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.pricing-card__note {
+  display: block;
+  font-size: var(--text-body-sm);
+  color: var(--muted);
+  margin-top: var(--space-2);
+}
+.pricing-card__compare {
+  font-size: var(--text-body-sm);
+  color: var(--muted);
+  margin-bottom: var(--space-5);
+}
+.pricing-card__compare s { color: var(--muted-2); }
+.pricing-card__includes {
+  list-style: none;
+  margin: 0 0 var(--space-6);
+  padding: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.pricing-card__includes li {
+  font-size: var(--text-body-sm);
+  color: var(--fg-2);
+  padding-left: var(--space-5);
+  position: relative;
+}
+.pricing-card__includes li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--amber);
+  font-weight: 700;
+}
+.pricing-card__cta { width: 100%; margin-bottom: var(--space-3); }
+.pricing-card__sub {
+  font-size: var(--text-caption);
+  color: var(--muted);
+  margin: 0;
+  line-height: var(--lh-normal);
+}
+</style>
