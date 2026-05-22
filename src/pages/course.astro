@@ -2,11 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ModuleCard from '../components/ModuleCard.astro';
 import PricingCard from '../components/PricingCard.astro';
-import WaitlistForm from '../components/WaitlistForm.astro';
+import CTAButton from '../components/CTAButton.astro';
 ---
 <BaseLayout
   title="The Course"
-  description="9 modules, 40+ lessons covering LLC formation, taxes, bookkeeping, Printify, Etsy, and a 90-day launch plan. Build your POD business right."
+  description="9 modules, 62 lessons covering LLC formation, taxes, bookkeeping, Printify, Etsy, and a 90-day launch plan. Build your POD business right."
 >
 
   <!-- ======================================================
@@ -20,7 +20,7 @@ import WaitlistForm from '../components/WaitlistForm.astro';
         The only POD course that starts where every other course stops — the legal foundation,
         the tax setup, the bookkeeping — before you touch a design tool or open an Etsy shop.
       </p>
-      <WaitlistForm />
+      <CTAButton href="https://payhip.com/order?link=r5xdu&pricing_plan=ANzp05RKzX" label="Enroll Now — $97 Early-Bird" size="lg" external />
     </div>
   </section>
 
@@ -89,7 +89,7 @@ import WaitlistForm from '../components/WaitlistForm.astro';
   <section class="course-modules" id="modules">
     <div class="container">
       <p class="eyebrow">What you get</p>
-      <h2>9 modules. 40+ lessons. 18 downloadable resources.</h2>
+      <h2>9 modules. 62 lessons. 31 downloadable resources.</h2>
       <div class="modules-full-grid">
         <ModuleCard
           number="0"
@@ -200,9 +200,9 @@ import WaitlistForm from '../components/WaitlistForm.astro';
   <section class="course-pricing" id="pricing">
     <div class="container-narrow">
       <p class="eyebrow">Enrollment</p>
-      <h2>Lock in the early-bird price.</h2>
+      <h2>Enroll now at the early-bird price.</h2>
       <p class="pricing-lead">
-        Join the waitlist now. When the course launches, waitlist members get first access and 30 days to enroll at $97 — the lowest this course will ever be.
+        Course opens June 1, 2026. $97 for the first 30 days — the lowest this course will ever be offered. No countdown timer. No artificial scarcity.
       </p>
       <PricingCard />
     </div>
@@ -242,7 +242,7 @@ import WaitlistForm from '../components/WaitlistForm.astro';
   <section class="course-final-cta">
     <div class="container-narrow">
       <h2>Ready to build it right?</h2>
-      <WaitlistForm />
+      <CTAButton href="https://payhip.com/order?link=r5xdu&pricing_plan=ANzp05RKzX" label="Enroll Now — $97" size="lg" external />
     </div>
   </section>
 

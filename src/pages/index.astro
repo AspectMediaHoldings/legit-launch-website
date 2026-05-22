@@ -3,7 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import CTAButton from '../components/CTAButton.astro';
 import ProblemCard from '../components/ProblemCard.astro';
 import ModulePreviewCard from '../components/ModulePreviewCard.astro';
-import WaitlistForm from '../components/WaitlistForm.astro';
 ---
 <BaseLayout
   title="The Legit Launch"
@@ -24,7 +23,7 @@ import WaitlistForm from '../components/WaitlistForm.astro';
             with the legal foundation, the tax setup, and the bookkeeping every real business needs.
           </p>
           <div class="hero__ctas">
-            <CTAButton href="https://thelegitlaunch.kit.com/42cf1d5c10" label="Join the Waitlist" size="lg" external />
+            <CTAButton href="https://payhip.com/order?link=r5xdu&pricing_plan=ANzp05RKzX" label="Enroll Now — $97" size="lg" external />
             <CTAButton href="/course" label="See the Course" variant="secondary" size="lg" />
           </div>
         </div>
@@ -35,8 +34,8 @@ import WaitlistForm from '../components/WaitlistForm.astro';
           </blockquote>
           <ul class="hero__stats">
             <li><strong>9</strong> modules</li>
-            <li><strong>40+</strong> lessons</li>
-            <li><strong>18</strong> downloadable resources</li>
+            <li><strong>62</strong> lessons</li>
+            <li><strong>31</strong> downloadable resources</li>
           </ul>
         </div>
       </div>
@@ -121,7 +120,7 @@ import WaitlistForm from '../components/WaitlistForm.astro';
   <section class="section-modules">
     <div class="container">
       <p class="eyebrow">What's inside</p>
-      <h2>9 modules. 40+ lessons. 18 downloadable resources.</h2>
+      <h2>9 modules. 62 lessons. 31 downloadable resources.</h2>
       <div class="modules-grid">
         <ModulePreviewCard
           number="0"
@@ -185,12 +184,15 @@ import WaitlistForm from '../components/WaitlistForm.astro';
   <section class="section-cta-final">
     <div class="container">
       <div class="cta-final-inner">
-        <p class="eyebrow" style="color:rgba(255,255,255,0.6)">Join the waitlist</p>
+        <p class="eyebrow" style="color:var(--amber)">Enrollment open</p>
         <h2>Ready to build it right?</h2>
         <p class="cta-final-sub">
-          Course opens late 2026. Waitlist members get first access and the early-bird price — the lowest this course will ever be offered.
+          $97 early-bird price for the first 30 days. Course opens June 1, 2026. No countdown timer. No artificial scarcity — this price will go up after 30 days.
         </p>
-        <WaitlistForm dark />
+        <div class="cta-final-actions">
+          <CTAButton href="https://payhip.com/order?link=r5xdu&pricing_plan=ANzp05RKzX" label="Enroll Now — $97" size="lg" external />
+          <p class="cta-final-waitlist">Not ready yet? <a href="https://thelegitlaunch.kit.com/42cf1d5c10" target="_blank" rel="noopener noreferrer">Join the waitlist</a> and we'll remind you at launch.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -403,6 +405,18 @@ import WaitlistForm from '../components/WaitlistForm.astro';
   margin-bottom: var(--space-6);
   font-size: var(--text-h4);
 }
+.cta-final-actions { display: flex; flex-direction: column; gap: var(--space-4); align-items: flex-start; }
+.cta-final-waitlist {
+  font-size: var(--text-body-sm);
+  color: rgba(255,255,255,0.5);
+  margin: 0;
+}
+.cta-final-waitlist a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.cta-final-waitlist a:hover { color: var(--amber); }
 
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
