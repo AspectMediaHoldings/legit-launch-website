@@ -82,7 +82,7 @@ const fullTitle = title === 'The Legit Launch' ? title : `${title} | The Legit L
   </main>
   <SiteFooter />
 
-  <!-- CTA event tracking — fires on waitlist and future enroll buttons -->
+  <!-- CTA event tracking — fires on lead magnet and enroll button clicks -->
   <script>
     document.addEventListener('click', (e) => {
       const target = (e.target as HTMLElement).closest('a');
@@ -90,10 +90,10 @@ const fullTitle = title === 'The Legit Launch' ? title : `${title} | The Legit L
       const href = target.getAttribute('href') || '';
       if (href.includes('kit.com') || href.includes('42cf1d5c10')) {
         if (typeof window !== 'undefined' && (window as any).gtag) {
-          (window as any).gtag('event', 'waitlist_click', { event_category: 'cta' });
+          (window as any).gtag('event', 'lead_magnet_click', { event_category: 'cta' });
         }
       }
-      if (href.includes('payhip.com') && href.includes('checkout')) {
+      if (href.includes('payhip.com')) {
         if (typeof window !== 'undefined' && (window as any).gtag) {
           (window as any).gtag('event', 'enroll_click', { event_category: 'cta' });
         }
