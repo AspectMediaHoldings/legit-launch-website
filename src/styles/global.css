@@ -67,7 +67,7 @@
 .site-nav a:hover { color: var(--amber); }
 .site-nav .nav-cta a {
   background: var(--amber);
-  color: var(--navy);
+  color: #0A1428;
   padding: var(--space-2) var(--space-4);
   border-radius: var(--radius);
 }
@@ -184,7 +184,7 @@
 }
 .btn-primary {
   background: var(--amber);
-  color: var(--navy);
+  color: #0A1428;
   border-color: var(--amber);
 }
 .btn-primary:hover {
