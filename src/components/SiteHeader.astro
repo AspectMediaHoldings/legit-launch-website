@@ -6,16 +6,18 @@
       <img src="/logos/logo-wordmark.svg" alt="The Legit Launch" width="220" height="36">
     </a>
 
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true'); document.getElementById('site-nav').classList.toggle('open')">
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true'); document.getElementById('site-nav').classList.toggle('open')">
       <span></span><span></span><span></span>
     </button>
 
-    <ul class="site-nav" id="site-nav" role="list">
-      <li><a href="/">Home</a></li>
-      <li><a href="/course">The Course</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li class="nav-cta"><a href="https://payhip.com/order?link=r5xdu&pricing_plan=ANzp05RKzX" target="_blank" rel="noopener noreferrer">Enroll Now</a></li>
-    </ul>
+    <nav aria-label="Primary">
+      <ul class="site-nav" id="site-nav" role="list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/course">The Course</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li class="nav-cta"><a href="https://payhip.com/order?link=r5xdu&pricing_plan=ANzp05RKzX" target="_blank" rel="noopener noreferrer">Enroll Now</a></li>
+      </ul>
+    </nav>
   </div>
 </header>

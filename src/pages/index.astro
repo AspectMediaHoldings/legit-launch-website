@@ -184,10 +184,13 @@ import ModulePreviewCard from '../components/ModulePreviewCard.astro';
   <section class="section-cta-final">
     <div class="container">
       <div class="cta-final-inner">
-        <p class="eyebrow" style="color:var(--amber)">Enrollment open</p>
+        <p class="eyebrow" style="color:var(--amber-text-on-navy)">Enrollment open</p>
         <h2>Ready to build it right?</h2>
         <p class="cta-final-sub">
-          $97 early-bird price through July 4, 2026. No countdown timer. No artificial scarcity — price goes to $147 on July 5.
+          A flat $97. One price, lifetime access. No countdown timer. No artificial scarcity. No tier that costs more later.
+        </p>
+        <p class="cta-final-bonus">
+          Launch week: August 21 through 28. Buy in that window and you also get a live Launch Week Q&A call and the Canva Template Pack, 5 templates. Both are gone after August 28. The $97 price does not change.
         </p>
         <div class="cta-final-actions">
           <CTAButton href="https://payhip.com/order?link=r5xdu&pricing_plan=ANzp05RKzX" label="Enroll Now — $97" size="lg" external />
@@ -235,7 +238,7 @@ import ModulePreviewCard from '../components/ModulePreviewCard.astro';
   font-weight: 700;
   letter-spacing: var(--tracking-eyebrow);
   text-transform: uppercase;
-  color: var(--amber);
+  color: var(--amber-text);
   margin: 0 0 var(--space-3);
 }
 .hero__callout blockquote {
@@ -402,13 +405,23 @@ import ModulePreviewCard from '../components/ModulePreviewCard.astro';
 .section-cta-final h2 { color: var(--white); margin-bottom: var(--space-4); }
 .cta-final-sub {
   color: rgba(255,255,255,0.7);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-4);
   font-size: var(--text-h4);
+}
+.cta-final-bonus {
+  color: rgba(255,255,255,0.85);
+  margin-bottom: var(--space-6);
+  font-size: var(--text-body-sm);
+  line-height: var(--lh-normal);
+  max-width: 560px;
+  padding: var(--space-4);
+  border: var(--hairline) solid var(--amber);
+  border-radius: var(--radius);
 }
 .cta-final-actions { display: flex; flex-direction: column; gap: var(--space-4); align-items: flex-start; }
 .cta-final-waitlist {
   font-size: var(--text-body-sm);
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.85);
   margin: 0;
 }
 .cta-final-waitlist a {

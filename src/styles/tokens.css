@@ -9,28 +9,28 @@
 /* ---------- Web fonts (self-hosted) ---------- */
 @font-face {
   font-family: "Lato";
-  src: url("fonts/Lato-Regular.woff2") format("woff2");
+  src: url("/fonts/Lato-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Lato";
-  src: url("fonts/Lato-Bold.woff2") format("woff2");
+  src: url("/fonts/Lato-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Playfair Display";
-  src: url("fonts/PlayfairDisplay-Regular.woff2") format("woff2");
+  src: url("/fonts/PlayfairDisplay-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Playfair Display";
-  src: url("fonts/PlayfairDisplay-Bold.woff2") format("woff2");
+  src: url("/fonts/PlayfairDisplay-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -43,9 +43,11 @@
   --navy-300:       #506890;   /* Muted navy for icons / secondary type on light. */
   --navy-tint:      #EEF2F9;   /* Pale navy wash for download cards and active rows. */
 
-  --amber:          #C8881A;   /* Accent. In-progress indicator, lesson markers. */
+  --amber:          #C8881A;   /* Accent. Background use only (button fills, borders). */
   --amber-700:      #A56F12;   /* Darker amber for hover/active. */
   --amber-tint:     #FBF1DD;   /* Pale amber for warning callouts and highlights. */
+  --amber-text:     #8B5A0A;   /* WCAG AA text color on white (ratio 5.99). Use for links, eyebrows, small text. */
+  --amber-text-on-navy: #E8A94A; /* WCAG AA text color on navy bg (ratio 5.4). Use for eyebrows on navy sections. */
 
   --white:          #FFFFFF;
   --bg:             #FFFFFF;   /* Page background. */
