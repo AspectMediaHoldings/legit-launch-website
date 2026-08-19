@@ -1,0 +1,607 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+
+const tiers = [
+  {
+    name: "Guided Setup",
+    price: "$497",
+    tagline: "One 90-minute session · course included",
+    subtitle: "Direction, not done-with-you. A working session, a written roadmap, 30 days of email support, and a review of your Etsy shop before you publish.",
+    features: [
+      "One 90-minute working session on Zoom",
+      "The full Legit Launch course ($97 value) included",
+      "30 days of email support (48-hour response, business days)",
+      "One review pass on your Etsy shop and first three listings before publishing",
+      "Written setup roadmap customized to your state, niche, and platform choices",
+    ],
+    timeline: "Two to four weeks depending on your pace",
+    fit: "Confident learners who want expert direction and a review before publishing.",
+    cta: "Book Guided Setup",
+    ctaHref: "mailto:hello@thelegitlaunch.com?subject=POD%20Legit%20Setup%20%E2%80%94%20Guided%20(%24497)",
+    highlight: false,
+  },
+  {
+    name: "Done-With-You Setup",
+    price: "$1,497",
+    tagline: "Four sessions · full engagement · 2-3 weeks",
+    subtitle: "The instructor with you through the whole build. LLC formed, EIN issued, bank account open, Printify connected, first three Etsy listings live at the end.",
+    features: [
+      "Four 60-minute live working sessions on Zoom, scheduled over 2-3 weeks",
+      "The full Legit Launch course included",
+      "Live walkthrough of the LLC formation on your state's site",
+      "Live EIN application on IRS.gov, filled out together",
+      "Business bank account paperwork prep",
+      "Printify account set up with you, provider selection based on your niche",
+      "QuickBooks Simple Start configured with your chart of accounts",
+      "First three Etsy listings built with you, mockup to publish",
+      "60 days of priority email + Voxer voice message support",
+      "Two review passes on your shop before launch",
+    ],
+    timeline: "Two to three weeks from kickoff to first three listings live",
+    fit: "Someone who wants a working business in weeks, values the instructor being present, and has the budget to trade money for time.",
+    cta: "Book Done-With-You Setup",
+    ctaHref: "mailto:hello@thelegitlaunch.com?subject=POD%20Legit%20Setup%20%E2%80%94%20Done-With-You%20(%241%2C497)",
+    highlight: true,
+    badge: "Most Popular",
+  },
+];
+
+const process = [
+  { step: "01", title: "Book and schedule", desc: "Purchase the tier that fits. You get a scheduling link within one business day and book your first session within seven days." },
+  { step: "02", title: "Intake", desc: "Complete a 10-minute intake before the first session — your state, niche direction, budget, timeline, prior experience." },
+  { step: "03", title: "Working sessions", desc: "Sessions on Zoom with screen sharing. You're at your computer, logged into whatever platform we're working on. I guide, review, and answer in real time. Sessions are recorded." },
+  { step: "04", title: "Between sessions", desc: "You take action on the assigned items. Email me (or Voxer for Tier 2) when you hit anything unclear. I respond within one business day." },
+  { step: "05", title: "Wrap", desc: "Your business is live. LLC formed, EIN issued, bank account open, Printify connected, Etsy shop live, first three listings published, QuickBooks tracking." },
+];
+
+const faqs = [
+  {
+    q: "Do you form the LLC for me?",
+    a: "No. You form the LLC yourself on your state's official site (in Florida that is Sunbiz.org). I walk you through it live on Zoom while you do it. This keeps you as the legal filer of record and keeps the cost of the service reasonable. Registered agent services or filing services from third parties are your call — I explain the tradeoffs.",
+  },
+  {
+    q: "Do you file my EIN for me?",
+    a: "No. You file the EIN yourself on IRS.gov, for free, while we are on the call together. Filing services that charge for this add no legal protection and cost money you do not need to spend.",
+  },
+  {
+    q: "Are you an attorney or a CPA?",
+    a: "No. I am a business operator who has built and runs a real print-on-demand business. I am not licensed to give legal or tax advice. What I share is based on the practical steps I took to set up my own business. For legal advice, consult a licensed attorney. For tax advice, consult a licensed CPA.",
+  },
+  {
+    q: "What if I already formed an LLC or already have an Etsy shop?",
+    a: "The service adapts. We pick up wherever you are. If your LLC is already formed but your Etsy shop is still under your personal name, we fix that. If your shop is live but your bookkeeping does not exist, we set it up. Book the tier that fits and we scope the sessions to your starting point on the intake.",
+  },
+  {
+    q: "What states do you work in?",
+    a: "Any US state. LLC formation rules vary by state, but the general flow (formation site, EIN, bank account, DBA where relevant) is the same. I pull your specific state's filing fee, site URL, and quirks before the first session.",
+  },
+  {
+    q: "Can I upgrade from Guided to Done-With-You later?",
+    a: "Yes. Within 30 days of purchase you can pay the difference and move up.",
+  },
+  {
+    q: "Do you offer refunds?",
+    a: "Guided: full refund within 7 days if we have not yet held the working session. After the session, no refund. Done-With-You: full refund within 7 days if we have not yet held the first working session. After the first session, prorated refund based on sessions delivered.",
+  },
+  {
+    q: "What if the sessions run long?",
+    a: "Sessions are scheduled for the stated length. If we need more time, we schedule a follow-up. I do not run sessions long past the clock — respect for your time and mine.",
+  },
+];
+---
+<BaseLayout
+  title="POD Legit Setup — Get Your Business Built With You"
+  description="Two ways to work with the instructor directly. Guided Setup ($497) or Done-With-You Setup ($1,497). LLC, EIN, bank account, Printify, Etsy — done together."
+>
+  <!-- HERO -->
+  <section class="setup-hero">
+    <div class="container-narrow">
+      <p class="eyebrow">POD Legit Setup — Companion Service</p>
+      <h1 class="display">Get your print-on-demand business set up right,<br>with the instructor sitting next to you.</h1>
+      <p class="lead">
+        The Legit Launch course teaches you how. POD Legit Setup does it with you. Live sessions, real accounts opened together, first listings launched under your LLC, and a working business at the end of two weeks.
+      </p>
+      <div class="setup-hero__ctas">
+        <CTAButton href="#tiers" label="See the Two Tiers" size="lg" />
+        <a href="/course" class="setup-hero__course-link">Or start with the $97 course →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPENING ARGUMENT -->
+  <section class="setup-argument">
+    <div class="container-narrow">
+      <p>The course works. Sixty-two lessons, thirty-one worksheets, every step of the process from LLC to first sale.</p>
+      <p>But some people do not want to watch videos. Some people want the instructor on a call with them, opening the Printify account together, walking through the EIN application while it happens, reviewing the Etsy listing before it goes live.</p>
+      <p class="setup-argument__pull">That is what POD Legit Setup is.</p>
+      <p>You do not read about how to form the LLC. We do it live on Zoom. You do not watch a tutorial on the EIN application. We fill it out together on the IRS site. You do not guess whether your first Etsy listing is ready. We open it side by side and fix what needs fixing.</p>
+      <p>At the end of the engagement, you have a real business. LLC formed. EIN issued. Business bank account open. Printify connected. Etsy shop live with the first three listings published. QuickBooks tracking every dollar.</p>
+      <p><strong>Not a course you started. A business that runs.</strong></p>
+    </div>
+  </section>
+
+  <!-- WHO -->
+  <section class="setup-who">
+    <div class="container-narrow">
+      <h2>Who this is for</h2>
+      <div class="setup-who__grid">
+        <div class="setup-who__col">
+          <h3>This is for you if:</h3>
+          <ul>
+            <li>You want a POD business set up correctly and you want it done in weeks, not months</li>
+            <li>You would rather have the instructor on a call with you than watch videos alone</li>
+            <li>You have the budget to pay for done-with-you help and value speed over saving money</li>
+            <li>You want someone to catch the mistake before it becomes a problem, not after</li>
+            <li>You want a real business at the end, not a to-do list</li>
+          </ul>
+        </div>
+        <div class="setup-who__col">
+          <h3>This is not for you if:</h3>
+          <ul>
+            <li>You are working with a tight budget and the $97 course fits better</li>
+            <li>You prefer to move at your own pace on your own time</li>
+            <li>You want a guru who will run the business for you (nobody legitimate does that — you have to own it)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIERS -->
+  <section id="tiers" class="setup-tiers">
+    <div class="container-narrow">
+      <p class="eyebrow eyebrow--center">Two ways to work together</p>
+      <h2>Pick the level that fits your need.</h2>
+      <div class="setup-tiers__grid">
+        {tiers.map((t) => (
+          <div class={`setup-tier ${t.highlight ? 'setup-tier--highlight' : ''}`}>
+            {t.badge && <div class="setup-tier__badge">{t.badge}</div>}
+            <h3 class="setup-tier__name">{t.name}</h3>
+            <div class="setup-tier__price">{t.price}</div>
+            <p class="setup-tier__tagline">{t.tagline}</p>
+            <p class="setup-tier__subtitle">{t.subtitle}</p>
+            <div class="setup-tier__section-label">What you get</div>
+            <ul class="setup-tier__features">
+              {t.features.map(f => <li>{f}</li>)}
+            </ul>
+            <div class="setup-tier__meta">
+              <div><strong>Timeline:</strong> {t.timeline}</div>
+              <div><strong>Best for:</strong> {t.fit}</div>
+            </div>
+            <CTAButton href={t.ctaHref} label={t.cta} variant={t.highlight ? 'primary' : 'secondary'} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="setup-proof">
+    <div class="container-narrow">
+      <p class="eyebrow">Proof</p>
+      <h2>Every step I walk you through is a step I have walked through myself.</h2>
+      <p>I am the owner of Aspect Media Holdings, LLC, based in Marianna, Florida. AMH runs three active print-on-demand product lines: Pets &amp; Coffee (Etsy + Printify — primary line), Family Matching Shirts (Etsy + Printify), and Scout Apparel (Printify private store).</p>
+      <p>The business is registered in Florida. The EIN was issued by the IRS. The bookkeeping runs in QuickBooks. The team includes a designer (Meghan) and a bookkeeper (Sarah).</p>
+      <p>Every step you will walk through with me is a step I have walked through myself. The LLC paperwork, the EIN application, the business bank account, the Etsy shop opened under the LLC, the Printify connection, the pricing formula, the sample orders, the quality control checkpoints, the monthly close, the quarterly tax payments.</p>
+      <p><strong>The course exists because I built the business first. The service exists because some people want the instructor in the room with them while they build theirs.</strong></p>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="setup-process">
+    <div class="container-narrow">
+      <p class="eyebrow">How it works</p>
+      <h2>Five steps, in order.</h2>
+      <ol class="setup-process__list">
+        {process.map(p => (
+          <li>
+            <div class="setup-process__step">{p.step}</div>
+            <div class="setup-process__body">
+              <h3>{p.title}</h3>
+              <p>{p.desc}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="setup-faq">
+    <div class="container-narrow">
+      <p class="eyebrow">Common questions</p>
+      <h2>FAQ</h2>
+      <div class="setup-faq__list">
+        {faqs.map(f => (
+          <details class="setup-faq__item">
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="setup-cta-final">
+    <div class="container-narrow">
+      <h2>Ready to build it with help?</h2>
+      <p>Email me and tell me which tier fits. I reply within one business day.</p>
+      <div class="setup-cta-final__buttons">
+        <CTAButton href="mailto:hello@thelegitlaunch.com?subject=POD%20Legit%20Setup%20%E2%80%94%20Guided%20(%24497)" label="Book Guided — $497" variant="secondary-white" />
+        <CTAButton href="mailto:hello@thelegitlaunch.com?subject=POD%20Legit%20Setup%20%E2%80%94%20Done-With-You%20(%241%2C497)" label="Book Done-With-You — $1,497" />
+      </div>
+      <p class="setup-cta-final__course">Not ready yet? <a href="/course">Start with the $97 course</a>.</p>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <section class="setup-disclaimer">
+    <div class="container-narrow">
+      <p><em>I am not a licensed attorney. I am not a licensed CPA. Nothing in this service constitutes legal advice or tax advice. The guidance I provide is based on my experience as the operator of Aspect Media Holdings, LLC, and general information about the LLC, EIN, and business banking process. For legal advice specific to your situation, consult a licensed attorney. For tax advice specific to your situation, consult a licensed CPA. Results are not guaranteed. Every business is different. What you get out of this service depends on the work you put in, the choices you make, and factors outside my control.</em></p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .container-narrow {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 var(--space-5);
+  }
+
+  /* HERO */
+  .setup-hero {
+    padding: var(--space-9) 0 var(--space-8);
+    background: var(--navy-tint);
+    text-align: center;
+  }
+  .setup-hero .eyebrow {
+    color: var(--amber-text);
+    margin-bottom: var(--space-4);
+  }
+  .setup-hero h1 {
+    margin-bottom: var(--space-5);
+    color: var(--navy);
+  }
+  .setup-hero .lead {
+    font-size: var(--text-h4);
+    color: var(--fg-2);
+    max-width: 700px;
+    margin: 0 auto var(--space-6);
+    line-height: var(--lh-normal);
+  }
+  .setup-hero__ctas {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .setup-hero__course-link {
+    color: var(--navy);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-size: var(--text-body-sm);
+    font-weight: 700;
+  }
+  .setup-hero__course-link:hover { color: var(--amber-text); }
+
+  /* ARGUMENT */
+  .setup-argument {
+    padding: var(--space-8) 0;
+  }
+  .setup-argument p {
+    font-size: var(--text-h4);
+    line-height: var(--lh-normal);
+    margin-bottom: var(--space-5);
+    color: var(--fg);
+  }
+  .setup-argument__pull {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-h3) !important;
+    color: var(--navy) !important;
+    border-left: 3px solid var(--amber);
+    padding-left: var(--space-5);
+  }
+
+  /* WHO */
+  .setup-who {
+    padding: var(--space-8) 0;
+    background: var(--navy-tint);
+  }
+  .setup-who h2 { margin-bottom: var(--space-6); color: var(--navy); }
+  .setup-who__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+  }
+  .setup-who__col h3 {
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: var(--space-4);
+  }
+  .setup-who__col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .setup-who__col li {
+    padding-left: var(--space-5);
+    position: relative;
+    margin-bottom: var(--space-3);
+    font-size: var(--text-body);
+    color: var(--fg);
+    line-height: var(--lh-normal);
+  }
+  .setup-who__col li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--amber-text);
+    font-weight: 700;
+  }
+  @media (max-width: 700px) {
+    .setup-who__grid { grid-template-columns: 1fr; gap: var(--space-6); }
+  }
+
+  /* TIERS */
+  .setup-tiers { padding: var(--space-9) 0; }
+  .setup-tiers .eyebrow--center { text-align: center; }
+  .setup-tiers h2 { text-align: center; margin-bottom: var(--space-6); color: var(--navy); }
+  .setup-tiers__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5);
+    align-items: stretch;
+  }
+  @media (max-width: 700px) {
+    .setup-tiers__grid { grid-template-columns: 1fr; }
+  }
+  .setup-tier {
+    background: var(--white);
+    border: var(--hairline) solid var(--border);
+    border-radius: var(--radius);
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: var(--shadow-sm);
+  }
+  .setup-tier--highlight {
+    border: 2px solid var(--amber);
+    background: var(--amber-tint);
+  }
+  .setup-tier__badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--amber);
+    color: #0A1428;
+    font-family: var(--font-body);
+    font-size: var(--text-label);
+    font-weight: 700;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 4px;
+  }
+  .setup-tier__name {
+    font-family: var(--font-display);
+    font-size: var(--text-h3);
+    color: var(--navy);
+    margin: 0 0 var(--space-2);
+  }
+  .setup-tier__price {
+    font-family: var(--font-display);
+    font-size: var(--text-h1);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: var(--space-2);
+  }
+  .setup-tier__tagline {
+    font-size: var(--text-body-sm);
+    color: var(--fg-2);
+    margin-bottom: var(--space-4);
+    font-weight: 700;
+  }
+  .setup-tier__subtitle {
+    font-size: var(--text-body);
+    color: var(--fg);
+    line-height: var(--lh-normal);
+    margin-bottom: var(--space-5);
+  }
+  .setup-tier__section-label {
+    font-family: var(--font-body);
+    font-size: var(--text-label);
+    font-weight: 700;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: var(--space-3);
+  }
+  .setup-tier__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-5);
+    flex: 1;
+  }
+  .setup-tier__features li {
+    padding-left: var(--space-5);
+    position: relative;
+    margin-bottom: var(--space-3);
+    font-size: var(--text-body-sm);
+    color: var(--fg);
+    line-height: var(--lh-normal);
+  }
+  .setup-tier__features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--amber-text);
+    font-weight: 700;
+  }
+  .setup-tier__meta {
+    background: var(--white);
+    border: var(--hairline) solid var(--border);
+    border-radius: var(--radius);
+    padding: var(--space-4);
+    margin-bottom: var(--space-5);
+    font-size: var(--text-body-sm);
+    line-height: var(--lh-normal);
+  }
+  .setup-tier__meta div { margin-bottom: var(--space-2); }
+  .setup-tier__meta div:last-child { margin-bottom: 0; }
+  .setup-tier--highlight .setup-tier__meta { background: var(--white); }
+  .setup-tier .btn { align-self: stretch; margin-top: auto; }
+
+  /* PROOF */
+  .setup-proof {
+    padding: var(--space-8) 0;
+    background: var(--navy-tint);
+  }
+  .setup-proof .eyebrow { color: var(--amber-text); margin-bottom: var(--space-3); }
+  .setup-proof h2 { color: var(--navy); margin-bottom: var(--space-5); }
+  .setup-proof p {
+    font-size: var(--text-body);
+    line-height: var(--lh-normal);
+    margin-bottom: var(--space-4);
+    color: var(--fg);
+  }
+
+  /* PROCESS */
+  .setup-process { padding: var(--space-9) 0; }
+  .setup-process .eyebrow { color: var(--amber-text); margin-bottom: var(--space-3); }
+  .setup-process h2 { color: var(--navy); margin-bottom: var(--space-6); }
+  .setup-process__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+  .setup-process__list li {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: var(--space-5);
+    align-items: start;
+    padding-bottom: var(--space-5);
+    border-bottom: var(--hairline) solid var(--border);
+  }
+  .setup-process__list li:last-child { border-bottom: none; }
+  .setup-process__step {
+    font-family: var(--font-display);
+    font-size: var(--text-h1);
+    font-weight: 700;
+    color: var(--amber);
+    line-height: 1;
+  }
+  .setup-process__body h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-h4);
+    color: var(--navy);
+    margin: 0 0 var(--space-2);
+  }
+  .setup-process__body p {
+    font-size: var(--text-body);
+    color: var(--fg);
+    margin: 0;
+    line-height: var(--lh-normal);
+  }
+
+  /* FAQ */
+  .setup-faq {
+    padding: var(--space-9) 0;
+    background: var(--navy-tint);
+  }
+  .setup-faq .eyebrow { color: var(--amber-text); margin-bottom: var(--space-3); }
+  .setup-faq h2 { color: var(--navy); margin-bottom: var(--space-6); }
+  .setup-faq__list { display: flex; flex-direction: column; gap: var(--space-3); }
+  .setup-faq__item {
+    background: var(--white);
+    border: var(--hairline) solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .setup-faq__item summary {
+    padding: var(--space-4) var(--space-5);
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: var(--text-body);
+    color: var(--navy);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-4);
+  }
+  .setup-faq__item summary::-webkit-details-marker { display: none; }
+  .setup-faq__item summary::after {
+    content: "+";
+    color: var(--amber);
+    font-size: var(--text-h3);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .setup-faq__item[open] summary::after { content: "−"; }
+  .setup-faq__item p {
+    padding: 0 var(--space-5) var(--space-5);
+    margin: 0;
+    color: var(--fg);
+    font-size: var(--text-body);
+    line-height: var(--lh-normal);
+  }
+
+  /* CTA FINAL */
+  .setup-cta-final {
+    padding: var(--space-9) 0;
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+  }
+  .setup-cta-final h2 { color: var(--white); margin-bottom: var(--space-4); }
+  .setup-cta-final p {
+    color: rgba(255,255,255,0.85);
+    font-size: var(--text-body);
+    margin-bottom: var(--space-6);
+  }
+  .setup-cta-final__buttons {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: var(--space-5);
+  }
+  .setup-cta-final__course {
+    font-size: var(--text-body-sm);
+    color: rgba(255,255,255,0.75);
+  }
+  .setup-cta-final__course a {
+    color: var(--white);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .setup-cta-final__course a:hover { color: var(--amber); }
+
+  /* DISCLAIMER */
+  .setup-disclaimer {
+    padding: var(--space-6) 0;
+    background: var(--white);
+    border-top: var(--hairline) solid var(--border);
+  }
+  .setup-disclaimer p {
+    font-size: var(--text-caption);
+    color: var(--muted);
+    line-height: var(--lh-normal);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+</style>
