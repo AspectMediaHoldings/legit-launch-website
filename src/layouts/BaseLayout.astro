@@ -63,8 +63,9 @@ const fullTitle = title === 'The Legit Launch' ? title : `${title} | The Legit L
   })}></script>
 
   <!-- Termly Consent Banner — must load before GA4 so consent defaults propagate.
+       is:inline required: Astro strips external-src scripts in .astro files without it.
        No SRI: Termly bundle updates when dashboard settings change; pinning a hash breaks the site. -->
-  <script src="https://app.termly.io/resource-blocker/e81ede1f-54b5-40f3-a97f-f9b141bb30c9?autoBlock=on"></script>
+  <script is:inline src="https://app.termly.io/resource-blocker/e81ede1f-54b5-40f3-a97f-f9b141bb30c9?autoBlock=on"></script>
 
   <!-- GA4 via Partytown (off main thread) — only loads when PUBLIC_GA_ID is set -->
   {GA_ID && (
