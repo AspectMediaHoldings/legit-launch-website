@@ -1,0 +1,520 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Join the Launch List"
+  description="The Legit Launch is open now at $97. Join the launch list for launch-week updates and your bonus reminder, or enroll today."
+>
+
+  <!-- ======================================================
+       HERO + EMAIL CAPTURE
+  ====================================================== -->
+  <section class="wl-hero" id="join">
+    <div class="container">
+      <div class="wl-hero__inner">
+        <div class="wl-hero__content">
+          <p class="eyebrow">The course is open</p>
+          <h1 class="display">Build your business the right way, from day one.</h1>
+          <p class="lead wl-hero__lead">
+            The Legit Launch is the only print-on-demand course that starts with the legal,
+            tax, and bookkeeping foundation before you design a single product. It begins
+            where the gurus stop. It is open now at $97. Join the launch list for launch-week
+            updates and your bonus reminder, or enroll today.
+          </p>
+          <p class="wl-hero__enroll">
+            <a href="https://payhip.com/order?link=r5xdu&pricing_plan=ANzp05RKzX" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Enroll Now — $97</a>
+          </p>
+        </div>
+
+        <div class="wl-hero__form-card">
+          <p class="wl-form-card__label">Join the launch list</p>
+          <p class="wl-form-card__sub">Enter your email for launch-week updates and your bonus reminder before August 28.</p>
+
+          <!-- Netlify detects this form at build time via data-netlify="true" -->
+          <form
+            name="waitlist"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/waitlist-success"
+            class="wl-form"
+          >
+            <input type="hidden" name="form-name" value="waitlist">
+
+            <!-- Honeypot: hidden from humans, catches bots -->
+            <p class="field-hidden" aria-hidden="true">
+              <label>Do not fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
+
+            <div class="field-group">
+              <label for="first-name">First name</label>
+              <input type="text" id="first-name" name="first-name" autocomplete="given-name" placeholder="Your first name">
+            </div>
+
+            <div class="field-group">
+              <label for="email">Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg wl-form__submit">Join the Launch List</button>
+            <p class="wl-form__note">No spam. Unsubscribe anytime. The course is open now at $97. The list keeps you posted through launch week.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       THE PROBLEM
+  ====================================================== -->
+  <section class="wl-problem">
+    <div class="container">
+      <p class="eyebrow">Why most POD shops fail</p>
+      <h2>Other courses skip the part that keeps you in business.</h2>
+      <p class="wl-problem__lead">
+        Every competitor course begins at the Etsy storefront and ends at the listing. They
+        show you how to post a product before you have a business behind it. The gaps do not
+        show up on day one. They show up later, when a dispute happens or tax season arrives.
+      </p>
+      <div class="wl-problem__grid">
+        <div class="wl-problem__card">
+          <h3>No legal entity</h3>
+          <p>No LLC means no separation between you and the business. One dispute or claim can reach your personal assets.</p>
+        </div>
+        <div class="wl-problem__card">
+          <h3>No tax setup</h3>
+          <p>No EIN and no plan for self-employment tax. Then the 1099-K arrives from Etsy and you have no idea what you owe.</p>
+        </div>
+        <div class="wl-problem__card">
+          <h3>No bookkeeping</h3>
+          <p>No records, no expense tracking, no monthly close. Tax season becomes a crisis instead of a routine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       WHAT MAKES THIS DIFFERENT: 5 PILLARS
+  ====================================================== -->
+  <section class="wl-pillars">
+    <div class="container">
+      <p class="eyebrow">What makes this different</p>
+      <h2>Five things every lesson is built on.</h2>
+      <div class="wl-pillars__grid">
+        <div class="wl-pillar">
+          <span class="wl-pillar__tag">Legal</span>
+          <p>LLC formation, EIN, business structure, and liability. The foundation no other course builds first.</p>
+        </div>
+        <div class="wl-pillar">
+          <span class="wl-pillar__tag">Money</span>
+          <p>Bookkeeping, taxes, quarterly payments, and deductions. Set up right before money ever moves.</p>
+        </div>
+        <div class="wl-pillar">
+          <span class="wl-pillar__tag">Myth Bust</span>
+          <p>The passive income claims and the $40 startup lie, taken apart with real numbers.</p>
+        </div>
+        <div class="wl-pillar">
+          <span class="wl-pillar__tag">How To</span>
+          <p>Step-by-step tutorials drawn straight from the course modules. Do the work alongside the lesson.</p>
+        </div>
+        <div class="wl-pillar">
+          <span class="wl-pillar__tag">Proof</span>
+          <p>Real examples from a print-on-demand business that is operating. Real decisions, real results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       WHAT'S INSIDE
+  ====================================================== -->
+  <section class="wl-inside">
+    <div class="container">
+      <p class="eyebrow">What's inside</p>
+      <h2>9 modules. 62 lessons. 31 downloads.</h2>
+      <div class="wl-inside__stats">
+        <div class="wl-stat">
+          <span class="wl-stat__num">9</span>
+          <span class="wl-stat__label">Modules</span>
+        </div>
+        <div class="wl-stat">
+          <span class="wl-stat__num">62</span>
+          <span class="wl-stat__label">Lessons</span>
+        </div>
+        <div class="wl-stat">
+          <span class="wl-stat__num">31</span>
+          <span class="wl-stat__label">Downloads</span>
+        </div>
+      </div>
+      <p class="wl-inside__lead">
+        The full path from legal foundation to launch. Legal setup, tax and money, niche
+        research, design, Printify operations, Etsy shop setup, day-to-day running, and a
+        90-day launch plan. Every module ships with checklists, worksheets, and calculators
+        you keep.
+      </p>
+      <ul class="wl-inside__list">
+        <li>Module 0 and 1: honest expectations, then LLC, EIN, business bank account, and licenses.</li>
+        <li>Module 2: QuickBooks, deductions, self-employment tax, quarterly payments, and the monthly close.</li>
+        <li>Modules 3 and 4: niche research with free tools, then design specs built for Printify.</li>
+        <li>Modules 5 and 6: Printify provider selection and quality control, then Etsy shop setup and listing SEO.</li>
+        <li>Modules 7 and 8: running the business day to day, then growth and your 90-day launch plan.</li>
+        <li>Three bonus modules: Canva Deep Dive, Printify Advanced, and Etsy Advanced.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       THE OFFER
+  ====================================================== -->
+  <section class="wl-offer">
+    <div class="container-narrow">
+      <div class="wl-offer__card">
+        <div class="wl-offer__badge">One Price</div>
+        <h2>One flat price. $97.</h2>
+        <p class="wl-offer__lead">
+          The course is open now at a flat $97. One price, one time, lifetime access. No tiers, no price
+          that rises later, no countdown timer, no fake scarcity. The only deadline is the launch-week bonus.
+        </p>
+        <ul class="wl-offer__includes">
+          <li>Flat $97, one price with no tiers</li>
+          <li>Open and available today, buy whenever you are ready</li>
+          <li>Lifetime access and all future updates</li>
+          <li>Every worksheet, checklist, and calculator included</li>
+        </ul>
+        <p class="wl-offer__bonus">
+          Launch week runs August 21 through 28. Buy in that window and you also get a seat on a live Launch Week Q&A call and the Canva Template Pack, 5 templates. Both bonuses are gone after August 28. The $97 price does not change.
+        </p>
+        <a href="https://payhip.com/order?link=r5xdu&pricing_plan=ANzp05RKzX" class="btn btn-primary btn-lg wl-offer__cta" target="_blank" rel="noopener noreferrer">Enroll Now — $97</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FINAL CTA
+  ====================================================== -->
+  <section class="wl-final">
+    <div class="container-narrow">
+      <div class="wl-final__inner">
+        <p class="eyebrow" style="color:var(--amber)">Launch week: August 21 to 28</p>
+        <h2>Do it legally and correctly the first time.</h2>
+        <p class="wl-final__sub">
+          The course is open now at $97. Enroll today, or join the launch list so you do not miss the launch-week bonus before August 28.
+        </p>
+        <a href="https://payhip.com/order?link=r5xdu&pricing_plan=ANzp05RKzX" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Enroll Now — $97</a>
+        <a href="#join" class="btn btn-secondary btn-lg wl-final__secondary">Join the Launch List</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       DISCLAIMER
+  ====================================================== -->
+  <section class="wl-disclaimer">
+    <div class="container-narrow">
+      <p>
+        This course covers general business and financial topics based on real operational
+        experience. It is not legal advice. Consult a licensed attorney for legal questions
+        specific to your situation. It is not tax advice. Consult a licensed CPA or tax
+        professional for tax questions specific to your situation.
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+/* ---- Hero + form ---- */
+.wl-hero {
+  padding: var(--space-9) 0 var(--space-8);
+  background: var(--surface);
+  border-bottom: var(--hairline) solid var(--border);
+}
+.wl-hero .eyebrow { color: var(--amber); margin-bottom: var(--space-4); }
+.wl-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: var(--space-8);
+  align-items: start;
+}
+.wl-hero .display { margin-bottom: var(--space-5); }
+.wl-hero__lead { margin-bottom: var(--space-6); max-width: 560px; }
+.wl-hero__enroll { margin: 0; }
+
+.wl-hero__form-card {
+  background: var(--white);
+  border: var(--hairline) solid var(--border);
+  border-top: 3px solid var(--amber);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+}
+.wl-form-card__label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-h3);
+  color: var(--navy);
+  margin: 0 0 var(--space-2);
+}
+.wl-form-card__sub {
+  font-size: var(--text-body-sm);
+  color: var(--fg-2);
+  margin: 0 0 var(--space-5);
+  line-height: var(--lh-normal);
+}
+
+/* ---- Form fields (matches contact form pattern) ---- */
+.wl-form { display: flex; flex-direction: column; gap: var(--space-4); }
+.field-hidden { display: none; }
+.field-group { display: flex; flex-direction: column; gap: var(--space-2); }
+.field-group label {
+  font-size: var(--text-body-sm);
+  font-weight: 700;
+  color: var(--fg);
+}
+.required { color: var(--amber); }
+.field-group input {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--fg);
+  background: var(--white);
+  border: var(--hairline) solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-4);
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+  width: 100%;
+}
+.field-group input:focus {
+  outline: none;
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(26,48,96,0.12);
+}
+.field-group input::placeholder { color: var(--muted-2); }
+.wl-form__submit { width: 100%; margin-top: var(--space-2); }
+.wl-form__note {
+  font-size: var(--text-caption);
+  color: var(--muted);
+  margin: 0;
+  line-height: var(--lh-normal);
+}
+
+/* ---- Problem ---- */
+.wl-problem { padding: var(--space-9) 0; background: var(--amber-tint); }
+.wl-problem h2 { margin-bottom: var(--space-4); }
+.wl-problem__lead {
+  font-size: var(--text-h4);
+  color: var(--fg-2);
+  max-width: 680px;
+  margin-bottom: var(--space-7);
+  line-height: var(--lh-normal);
+}
+.wl-problem__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+.wl-problem__card {
+  background: var(--white);
+  border: var(--hairline) solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-5);
+}
+.wl-problem__card h3 {
+  font-family: var(--font-body);
+  font-size: var(--text-h4);
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 var(--space-2);
+}
+.wl-problem__card p {
+  font-size: var(--text-body-sm);
+  color: var(--fg-2);
+  margin: 0;
+  line-height: var(--lh-normal);
+}
+
+/* ---- Pillars ---- */
+.wl-pillars { padding: var(--space-9) 0; }
+.wl-pillars h2 { margin-bottom: var(--space-7); }
+.wl-pillars__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+.wl-pillar {
+  border: var(--hairline) solid var(--border);
+  border-left: 3px solid var(--amber);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: var(--space-5);
+  background: var(--surface);
+}
+.wl-pillar__tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: var(--space-3);
+}
+.wl-pillar p {
+  font-size: var(--text-body-sm);
+  color: var(--fg-2);
+  margin: 0;
+  line-height: var(--lh-normal);
+}
+
+/* ---- What's inside ---- */
+.wl-inside { padding: var(--space-9) 0; background: var(--surface-alt); }
+.wl-inside h2 { margin-bottom: var(--space-6); }
+.wl-inside__stats {
+  display: flex;
+  gap: var(--space-8);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+}
+.wl-stat { display: flex; flex-direction: column; }
+.wl-stat__num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+}
+.wl-stat__label {
+  font-size: var(--text-body-sm);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-eyebrow);
+  margin-top: var(--space-2);
+}
+.wl-inside__lead {
+  font-size: var(--text-h4);
+  color: var(--fg-2);
+  max-width: 680px;
+  margin-bottom: var(--space-6);
+  line-height: var(--lh-normal);
+}
+.wl-inside__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 720px;
+}
+.wl-inside__list li {
+  font-size: var(--text-body-sm);
+  color: var(--fg-2);
+  padding-left: var(--space-5);
+  position: relative;
+  line-height: var(--lh-normal);
+}
+.wl-inside__list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--amber);
+  font-weight: 700;
+}
+
+/* ---- Offer ---- */
+.wl-offer { padding: var(--space-9) 0; }
+.wl-offer__card {
+  background: var(--amber-tint);
+  border: 2px solid var(--amber);
+  border-radius: var(--radius-lg);
+  padding: var(--space-7) var(--space-6);
+  text-align: center;
+}
+.wl-offer__badge {
+  display: inline-block;
+  background: var(--amber);
+  color: var(--white);
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-5);
+}
+.wl-offer__card h2 { margin-bottom: var(--space-4); }
+.wl-offer__lead {
+  font-size: var(--text-body);
+  color: var(--fg-2);
+  max-width: 560px;
+  margin: 0 auto var(--space-6);
+  line-height: var(--lh-normal);
+}
+.wl-offer__includes {
+  list-style: none;
+  margin: 0 auto var(--space-6);
+  padding: 0;
+  text-align: left;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.wl-offer__includes li {
+  font-size: var(--text-body-sm);
+  color: var(--fg-2);
+  padding-left: var(--space-5);
+  position: relative;
+}
+.wl-offer__includes li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--amber);
+  font-weight: 700;
+}
+.wl-offer__bonus {
+  font-size: var(--text-body-sm);
+  color: var(--fg-2);
+  max-width: 520px;
+  margin: 0 auto var(--space-6);
+  padding: var(--space-4);
+  background: var(--white);
+  border: var(--hairline) solid var(--amber);
+  border-radius: var(--radius);
+  line-height: var(--lh-normal);
+}
+
+/* ---- Final CTA ---- */
+.wl-final { padding: var(--space-9) 0; background: var(--navy); }
+.wl-final__inner { max-width: 600px; text-align: center; margin: 0 auto; }
+.wl-final h2 { color: var(--white); margin-bottom: var(--space-4); }
+.wl-final__sub {
+  color: rgba(255,255,255,0.7);
+  margin-bottom: var(--space-6);
+  font-size: var(--text-h4);
+  line-height: var(--lh-normal);
+}
+.wl-final__secondary { margin-left: var(--space-3); }
+@media (max-width: 600px) {
+  .wl-final__secondary { margin-left: 0; margin-top: var(--space-3); }
+}
+
+/* ---- Disclaimer ---- */
+.wl-disclaimer {
+  padding: var(--space-6) 0 var(--space-8);
+  border-top: var(--hairline) solid var(--border);
+}
+.wl-disclaimer p {
+  font-size: var(--text-caption);
+  color: var(--muted);
+  line-height: var(--lh-normal);
+  margin: 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .wl-hero__inner { grid-template-columns: 1fr; }
+  .wl-problem__grid { grid-template-columns: 1fr; }
+  .wl-pillars__grid { grid-template-columns: 1fr; }
+}
+</style>

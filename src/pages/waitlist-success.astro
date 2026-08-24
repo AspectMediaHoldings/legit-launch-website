@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="You're on the Launch List"
+  description="You have joined the launch list for The Legit Launch."
+  noIndex={true}
+>
+  <section class="success-page">
+    <div class="container-narrow">
+      <div class="success-box">
+        <div class="success-icon" aria-hidden="true">✓</div>
+        <h1>You're on the list.</h1>
+        <p>You are on the launch list. We will send launch-week updates and remind you about the bonus before it ends August 28.</p>
+        <p>The course is open now at $97, one price with lifetime access. Enroll whenever you are ready. Buy during launch week, August 21 through 28, and you also get a seat on a live Q&A call and the Canva Template Pack.</p>
+        <p>Watch for a message from <strong>hello@thelegitlaunch.com</strong>. Add it to your contacts so it does not land in spam.</p>
+        <div class="success-actions">
+          <a href="https://payhip.com/order?link=r5xdu&pricing_plan=ANzp05RKzX" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Enroll Now — $97</a>
+          <a href="/course" class="btn btn-secondary">See What's Inside</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.success-page {
+  padding: var(--space-9) 0;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+.success-box {
+  background: var(--white);
+  border: var(--hairline) solid var(--border);
+  border-top: 3px solid var(--amber);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-7);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+.success-icon {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--amber);
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-5);
+}
+.success-box h1 { margin-bottom: var(--space-4); }
+.success-box p { color: var(--fg-2); margin-bottom: var(--space-3); max-width: 480px; margin-left: auto; margin-right: auto; }
+.success-actions { display: flex; gap: var(--space-4); justify-content: center; margin-top: var(--space-6); flex-wrap: wrap; }
+</style>

@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Data Deletion Request"
+  description="Request deletion of data The Legit Launch has collected about you from Instagram or Facebook interactions with our automated reply system."
+>
+
+  <!-- ======================================================
+       HERO
+  ====================================================== -->
+  <section class="deletion-hero">
+    <div class="container-narrow">
+      <p class="eyebrow">Your data, your call</p>
+      <h1>Data Deletion Request</h1>
+      <p class="lead">How to have your data removed from The Legit Launch's records</p>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       BODY
+  ====================================================== -->
+  <section class="deletion-body">
+    <div class="container-narrow">
+
+      <h2>What Data We Collect</h2>
+      <p>
+        When you comment on a Legit Launch post on Instagram or Facebook using a keyword tied to one of our automated reply flows, our system receives the following from Meta:
+      </p>
+      <ul>
+        <li>Your Instagram or Facebook username or handle</li>
+        <li>The Meta-assigned user ID for your account</li>
+        <li>The text of the comment you posted</li>
+        <li>The post you commented on</li>
+        <li>The timestamp of the comment</li>
+      </ul>
+      <p>
+        We use this data to send you the private reply you asked for, log the delivery, and diagnose failures. We do not sell it. We do not use it for advertising.
+      </p>
+
+      <h2>How to Request Deletion</h2>
+      <p>
+        Email <a href="mailto:hello@thelegitlaunch.com?subject=DATA%20DELETION">hello@thelegitlaunch.com</a> with the subject line <strong>DATA DELETION</strong>.
+      </p>
+      <p>Include the following in the email body:</p>
+      <ol>
+        <li>The Instagram or Facebook handle for which you want data deleted</li>
+        <li>The email address you want the deletion confirmation sent to</li>
+      </ol>
+      <p>
+        You do not need to prove ownership of the account. Requests are honored on request.
+      </p>
+
+      <h2>Response Time</h2>
+      <p>
+        We confirm receipt within 3 business days and complete deletion within 30 days of the request. You will receive an email confirmation when deletion is complete.
+      </p>
+
+      <h2>What Gets Deleted</h2>
+      <p>When you request deletion, we remove:</p>
+      <ul>
+        <li>All records tied to your Instagram or Facebook user ID</li>
+        <li>Your handle</li>
+        <li>All comment text we stored from your interactions</li>
+        <li>All delivery logs referencing your account</li>
+      </ul>
+      <p>
+        Aggregate operational data that does not identify you (total comments processed, total DMs sent, funnel performance counts) is retained.
+      </p>
+
+      <h2>Data We Do Not Control</h2>
+      <p>
+        This request removes data from The Legit Launch's records. It does not remove:
+      </p>
+      <ul>
+        <li>The comment itself from Instagram or Facebook. Delete it in the Meta app.</li>
+        <li>The direct message we sent you. Delete it from your inbox in the Meta app.</li>
+        <li>Data Meta holds about you. Manage that in your Meta account settings.</li>
+      </ul>
+
+      <h2>Questions</h2>
+      <p>
+        Email <a href="mailto:hello@thelegitlaunch.com">hello@thelegitlaunch.com</a>. Owner: Nathan Spells, Aspect Media Holdings, LLC, Marianna, Florida.
+      </p>
+
+      <p class="last-updated">Last updated: August 23, 2026</p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+.deletion-hero {
+  padding: var(--space-9) 0 var(--space-6);
+  background: var(--surface);
+  border-bottom: var(--hairline) solid var(--border);
+}
+.deletion-hero h1 { margin-bottom: var(--space-2); }
+
+.deletion-body { padding: var(--space-8) 0 var(--space-9); }
+.deletion-body h2 {
+  margin-top: var(--space-7);
+  margin-bottom: var(--space-3);
+}
+.deletion-body h2:first-of-type { margin-top: 0; }
+.deletion-body p,
+.deletion-body ul,
+.deletion-body ol {
+  max-width: 640px;
+  color: var(--fg-2);
+}
+.deletion-body ul,
+.deletion-body ol {
+  padding-left: var(--space-5);
+  margin-bottom: var(--space-4);
+}
+.deletion-body li { margin-bottom: var(--space-2); }
+.deletion-body a {
+  color: var(--navy);
+  text-decoration: underline;
+}
+.last-updated {
+  margin-top: var(--space-7);
+  font-size: var(--text-caption);
+  color: var(--muted);
+  font-style: italic;
+}
+</style>

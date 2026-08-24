@@ -20,7 +20,7 @@ import CTAButton from '../components/CTAButton.astro';
         The only POD course that starts where every other course stops — the legal foundation,
         the tax setup, the bookkeeping — before you touch a design tool or open an Etsy shop.
       </p>
-      <CTAButton href="https://payhip.com/order?link=r5xdu&pricing_plan=ANzp05RKzX" label="Enroll Now — $97 Early-Bird" size="lg" external />
+      <CTAButton href="https://payhip.com/order?link=r5xdu&pricing_plan=ANzp05RKzX" label="Enroll Now — $97" size="lg" external />
     </div>
   </section>
 
@@ -200,9 +200,12 @@ import CTAButton from '../components/CTAButton.astro';
   <section class="course-pricing" id="pricing">
     <div class="container-narrow">
       <p class="eyebrow">Enrollment</p>
-      <h2>Enroll now at the early-bird price.</h2>
+      <h2>Enroll now at $97.</h2>
       <p class="pricing-lead">
-        $97 through July 4, 2026 — the lowest this course will ever be offered. Price goes to $147 on July 5. No countdown timer. No artificial scarcity.
+        A flat $97. One price, lifetime access. No tiers, no price that rises later, no countdown timer, no artificial scarcity.
+      </p>
+      <p class="pricing-bonus">
+        Launch week runs August 21 through 28. Buy in that window and you also get a seat on a live Launch Week Q&A call and the Canva Template Pack, 5 templates. Both bonuses are gone after August 28. The $97 price does not change.
       </p>
       <PricingCard />
     </div>
@@ -371,7 +374,18 @@ import CTAButton from '../components/CTAButton.astro';
 /* Pricing */
 .course-pricing { padding: var(--space-9) 0; }
 .course-pricing h2 { margin-bottom: var(--space-3); }
-.pricing-lead { margin-bottom: var(--space-7); font-size: var(--text-h4); color: var(--fg-2); max-width: 560px; }
+.pricing-lead { margin-bottom: var(--space-4); font-size: var(--text-h4); color: var(--fg-2); max-width: 560px; }
+.pricing-bonus {
+  margin-bottom: var(--space-7);
+  font-size: var(--text-body-sm);
+  color: var(--fg-2);
+  max-width: 560px;
+  padding: var(--space-4);
+  background: var(--amber-tint);
+  border: var(--hairline) solid var(--amber);
+  border-radius: var(--radius);
+  line-height: var(--lh-normal);
+}
 
 /* Guarantee */
 .course-guarantee { padding: var(--space-7) 0; background: var(--surface-alt); }
